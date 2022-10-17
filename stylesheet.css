@@ -1,24 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
 }
 
-header{
+header {
     background: white;
     text-align: center;
     padding: 5px;
 }
 
-body{
+body {
     background-color: #1d1d1d;
 
 }
 
-footer{
+footer {
     background: white;
     text-align: center;
     padding: 5px;
@@ -26,16 +26,30 @@ footer{
     font-family: Roboto;
 }
 
-.banner-image{
+.banner-image {
     height: 250px;
     width: 100%;
     object-fit: cover;
     float: center;
     margin-top: 0px;
     padding-top: -5px;
+    
 }
 
-.info{
+.grid-generico{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.grid-generico>p{
+    padding: 40px;
+}
+
+.info {
     margin-top: 25px;
     padding: 5px;
     margin-bottom: 25px;
@@ -44,41 +58,59 @@ footer{
     padding-right: 50px;
 }
 
-.info > h1{
+.info>h1 {
     margin-bottom: 30px;
     text-align: center;
 }
 
-.info > p{
+.infop {
     margin-bottom: 30px;
 }
 
-ul {
+.infop>p{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.infop>h1{
+    margin-bottom: 60px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infop>h2{
+    text-align: center;
+}
+
+.infop>p{
+    font-size: 25px;
+}
+
+.infop>ul{
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.infop>ul>li{
+    margin: 20px;
+    text-align:justify;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.projeto>img {
+    width: 95%;
+    height: 95%;
     display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-.projetos > ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-ul > li {
-    width: 25%;
-}
-
-.projeto > img{
-    width: 100%;
-    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
