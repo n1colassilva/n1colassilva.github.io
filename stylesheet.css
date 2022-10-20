@@ -1,116 +1,117 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('http://fonts.cdnfonts.com/css/vcr-osd-mono');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-* {
+    /*placeholder fonts repository*/
+    /*font-family: 'Roboto Mono', monospace;*/
+    /*font-family: 'VCR OSD Mono', sans-serif;*/
+
+*{
+    font-family: 'VCR OSD Mono', sans-serif;
+    color: white;
+    font-style: normal;
+    background-color: #12181b;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
 }
 
-header {
-    background: white;
-    text-align: center;
-    padding: 5px;
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
 }
 
-body {
-    background-color: #1d1d1d;
-
+a{
+    text-decoration: none;
 }
 
-footer {
-    background: white;
-    text-align: center;
-    padding: 5px;
-    margin-top: 50px;
-    font-family: Roboto;
+.top-nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 0px;
 }
 
-.banner-image {
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    float: center;
-    margin-top: 0px;
-    padding-top: -5px;
-    
+.top-nav-bar > #logo{
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: auto;
+    padding-left: 30px;
 }
 
-.grid-generico{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    text-align: center;
-    margin-top: 40px;
+.top-nav-bar ul, li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 23px;
+    padding: 0px 20px;
+}
+
+.title > h1{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    font-size: 70px;
+    font-weight: normal;
+    font: normal;
+}
+
+.title > h2{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    font-size: 50px;
+    font-weight: normal;
+    font: normal;
+}
+
+#description{
+    font-size: 22px;
+    margin-top: 75px;
     margin-bottom: 100px;
 }
 
-.grid-generico>p{
-    padding: 40px;
-}
-
-.info {
-    margin-top: 25px;
-    padding: 5px;
-    margin-bottom: 25px;
-    color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.info>h1 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.infop {
+#description > p{
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.infop>p{
-    text-align: center;
-    font-size: 40px;
-    margin-top: 50px;
-    margin-bottom: 80px;
-}
-
-.infop>h1{
-    margin-bottom: 60px;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.infop>h2{
-    text-align: center;
-}
-
-.infop>p{
-    font-size: 25px;
-}
-
-.infop>ul{
-    display: inline-block;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
-
-.infop>ul>li{
-    margin: 20px;
-    text-align:justify;
-}
-
-.projetos {
+#qualifications{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
 }
 
-.projeto>img {
-    width: 95%;
-    height: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.qualification{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: #353535;
+font-size: 3rem;
+color: #fff;
+/*box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;*/
+height: 100%;
+width: 100%;
+border-radius: 8px;
+transition: all 500ms;
+overflow: hidden;
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+cursor: default;
+
+}
+
+.qualification:hover {
+    /*box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;*/
+    transform: /*translateY(-3px)*/ scale(1.1);
+}
+
+.qualification-img{
+    width: 100%;
+    height: 100%;
 }
