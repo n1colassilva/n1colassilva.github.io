@@ -18,7 +18,7 @@
 body{
     display: flex;
     flex-direction: column;
-    margin: 20px 50px;
+    margin: 20px 5vw;
 }
 
 a{
@@ -55,7 +55,7 @@ a{
     margin-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 70px;
+    font-size: 10vmin;
     font-weight: normal;
     font: normal;
     background-color: white;
@@ -67,7 +67,8 @@ a{
 .title > h2{
     padding-left: 5px;
     padding-right: 5px;
-    font-size: 50px;
+    margin-bottom: 90px;
+    font-size: 10vmin;
     font-weight: normal;
     font: normal;
     background-color: white;
@@ -77,9 +78,10 @@ a{
 }
 
 #description{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-top: 60px;
     margin-bottom: 100px;
+    line-height: 50px;
 }
 
 #description > p{
@@ -90,7 +92,8 @@ a{
 #qualifications{
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(100px, 5fr));
+    margin-bottom: 100px;
 
 }
 
@@ -126,4 +129,40 @@ cursor: default;
 .qualification-img{
     width: 100%;
     height: 100%;
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    padding: 20px;
+    grid-gap: 3rem;
+    margin-bottom: 60px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #2a2e35;
+}
+
+.project > h5{
+    font-size: 5vmin;
+    text-align: center;
+    background: #2a2e35
+}
+
+.project-img{
+    width: 100%;
+    margin-bottom: 2rem;
+    background: #2a2e35
+}
+
+.project-desc{
+    font-size: 4.5vmin;
+    margin-top: 50px;
+    background: #2a2e35
 }
