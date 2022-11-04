@@ -42,9 +42,26 @@ a {
 li {
     list-style-type: none;
     display: inline-block;
-    font-size: 20px;
-    padding: 0px 0px 0px 20px;
+    font-size: 30px;
+    transition: all 500ms;
 }
+
+.top-nav-bar>ul>li:hover {
+    transform:
+        scale(1.1);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav-button {
+    padding: 10px;
+    border-radius: 10px;
+    color: #12181b;
+    background-color: white;
+    font-size: 20px;
+    transition: all 500ms;
+}
+
 
 .title {
     text-align: center;
@@ -211,20 +228,19 @@ li {
 
 .school>a {
     border-radius: 10px;
-    background: #353535;
+    background-color: #2a2e35;
 }
 
 .school-img {
     width: 100%;
     border-radius: 10px;
-    background: #353535;
     transition: all 400ms;
 }
 
 .school-img:hover {
     transform:
-        scale(1.1);
-    border-radius: 0px;
+        scale(1.025);
+    margin-bottom: 10px;
 }
 
 .school-desc {
@@ -261,21 +277,27 @@ li {
 }
 
 .experience>h5 {
+    margin-top: 1rem;
     font-size: 5vmin;
     text-align: center;
     background: #2a2e35
 }
 
+.experience>a {
+    background-color: #2a2e35;
+}
+
 .experience-img {
     width: 100%;
-    margin-bottom: 1rem;
     border-radius: 10px;
-    background: #2a2e35 transition: all 400ms;
+    transition: all 500ms;
+
 }
 
 .experience-img:hover {
     transform:
-        scale(1.1);
+        scale(1.025);
+    margin-bottom: 10px;
 }
 
 .experience-desc {
@@ -317,6 +339,15 @@ li {
 .links>a>img {
     width: 150px;
     margin: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 400ms;
+}
+
+.links>a>img:hover {
+    transform:
+        scale(1.1);
 }
 
 .contact-adresses {
@@ -335,12 +366,45 @@ li {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 5vmin;
+}
+
+.contact-adress>p {
+    transition: all 400ms;
+}
+
+.contact-adress>p:hover {
+    transform:
+        scale(1.1);
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .contact-symbol {
     width: 75px;
     height: 75px;
+    margin-right: 10px;
+}
+
+.contact-whatsapp {
+    width: 40vmax;
+    transition: all 400ms;
+}
+
+.contact-whatsapp:hover {
+    transform:
+        scale(1.1);
+}
+
+.contact-emoji {
+    font-size: 70px;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.contact-emoji:hover {
+    transform:
+        scale(1.1);
     margin-right: 10px;
 }
 

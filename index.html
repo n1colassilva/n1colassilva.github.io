@@ -13,10 +13,11 @@
       <nav class="top-nav-bar">
         <a href="#" id="logo">NÍCOLAS</a>
         <ul>
-          <li>CONTATO</li>
-          <li>QUALIFICACÃO</li>
-          <li>PROJETOS</li>
-          <li>COMPETÊNCIAS</li>
+          <li><a class="nav-button" href="#qualification-title"> CONHECIMENTO</a></li>
+          <li><a class="nav-button"href="#projects"> PROJETOS</a></li>
+          <li><a class="nav-button"href="#schools-title"> ENSINO</a></li>
+          <li><a class="nav-button"href="#exoeriences-title"> EXPERIENCIA</a></li>
+          <li><a class="nav-button"href="#contact-title"> CONTATO </a></li>
         </ul>
       </nav>
     </header>
@@ -34,7 +35,7 @@
           para os cursos de Tecnologia da Informação e Ciências da Computação.
         </p>
         <p>
-          → Algumas abilidades que obtive ao longo da vida incluem mas não se
+          → Algumas habilidades que obtive ao longo da vida incluem mas não se
           limitam a: Persistir, Aprender maneiras mais eficientes de fazer tudo,
           Aprender aprender aprender..., trabalhar em equipe, Saber quando parar
           para reavaliar as opções e um desejo constante de sempre poder ajudar
@@ -50,7 +51,7 @@
           de informática.
         </p>
       </div>
-      <div class="title"><h2>►CONHECIMENTO◄</h2></div>
+      <div class="title" id="qualification-title"><h2>►CONHECIMENTO◄</h2></div>
       <section id="qualifications">
         <div class="qualification">
           <img src="imagens/c.svg" alt="" class="qualification-img" />
@@ -88,18 +89,19 @@
       <div class="title"><h2>►PROJETOS◄</h2></div>
       <div id="projects">
         <div class="project">
+          <a href="ppt.html">
           <img
             src="imagens/pedrapapeltesoura.png"
             alt="Pedra papel ou tesoura"
             class="project-img"
-          />
+          /></a>
           <h5>Pedra papel tesoura</h5>
           <p class="project-desc">
             Web app simples que simula um jogo de pedra papel ou tesoura contra
             o computador
           </p>
         </div>
-        <div class="project">
+        <!--<div class="project">
           <img src="imagens/python.png" alt="" class="project-img" />
           <h5>Placeholder</h5>
           <p class="project-desc">
@@ -116,9 +118,9 @@
           <p class="project-desc">
             Pedra papel ou tesoura se torna um clicker (WIP)
           </p>
-        </div>
+        </div>-->
       </div>
-      <div class="title"><h2>►ENSINO◄</h2></div>
+      <div class="title"><h2 id="schools-title">►ENSINO◄</h2></div>
       <div id="schools">
         <div class="school">
           <a href="https://iftm.edu.br/"
@@ -155,17 +157,25 @@
           <p class="school-desc">Curso de menor aprendiz</p>
         </div>
       </div>
-      <div class="title"><h2>►EXPERIÊNCIA◄</h2></div>
+      <div class="title"><h2 id="experiences-title">►EXPERIÊNCIA◄</h2></div>
       <div id="experiences">
         <div class="experience">
+          <a href="http://www.sunsalesystem.com.br/index.php"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src="imagens/sunsale_system.png" alt="" class="experience-img" />
+          </a>
           <h5>SunSale System</h5>
           <p class="experience-desc">
             Estágio de 120hrs em 2021 como desenvolvedor de front-end.
           </p>
         </div>
         <div class="experience">
+          <a href="https://paratudo.com.br/"
+          target="_blank"
+          rel="noopener noreferrer">
           <img src="imagens/paratudo.jpg" alt="" class="experience-img" />
+          </a>
           <h5>ATUAL: Instituto João Bittar - Paratudo Bebidas</h5>
           <p class="experience-desc">
             Jovem Aprendiz no setor de TI da Paratudo Bebidas, interagindo com o
@@ -194,32 +204,26 @@
             <div class="contacts-adresses">
                 <div id="email" class="contact-adress">
                     <a href="mailto:nicolassilva0109@gmail.com" >
-                      <img
-                        src="imagens/email.svg"
-                        alt="email"
-                        class="contact-symbol"
-                      /></a>
-                      <p>← nicolassilva0109@gmail.com</p>
+                      <div class="contact-emoji">📧</div>
+                    </a>
+                    <p onclick="copyEmail()">← nicolassilva0109@gmail.com </p>
                 </div>
               </div>
               <div id="numero" class="contact-adress">
-                  <img
-                    src="imagens/telefone.svg"
-                    alt="telefone"
-                    class="contact-symbol"
-                    onclick="copyPhone()"
-                  />
-                  <p>← +55 (34) 9 9199-9412</p>
+                  <div
+                    class="contact-emoji"
+                  ><a href="tel:5534991999412">📞</a></div>
+                  <p><a onclick="copyPhone()"> ← +55 (34) 9 9199-9412</a></p>
               </div>
               <div id="whatsapp" class="contact-adress">
                 <a href="https://wa.me/5534991999412">  
                   <img
-                    src="imagens/whatsapp.svg"
+                    src="imagens/WhatsAppButtonGreen.svg"
                     alt="whatsapp"
-                    class="contact-symbol"
+                    class="contact-whatsapp"
                   />
                 </a>
-                  <p>← +55 (34) 9 9199-9412</p>
+                  <!-- <p>← +55 (34) 9 9199-9412</p> -->
               </div>
             </div>
           </div>
