@@ -44,6 +44,11 @@ li {
     display: inline-block;
     font-size: 30px;
     transition: all 500ms;
+    margin-bottom: 10px;
+}
+
+.top-nav-bar>ul {
+    margin-left: 10px;
 }
 
 .top-nav-bar>ul>li:hover {
@@ -120,7 +125,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #353535;
+    background: #12181b;
     font-size: 3rem;
     color: #fff;
     /*box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;*/
@@ -147,7 +152,8 @@ li {
 
 .qualification-img {
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    background-color: #12181b;
 }
 
 #projects {
@@ -182,9 +188,19 @@ li {
 
 .project-img {
     border-radius: 10px;
+    background: #2a2e35;
     width: 100%;
-    margin-bottom: 2rem;
-    background: #2a2e35
+    transition: all 400ms;
+}
+
+.project-img:hover {
+    transform:
+        scale(1.025);
+    margin-bottom: 20px;
+}
+
+.project>a {
+    background: #2a2e35;
 }
 
 .project-desc {
@@ -370,6 +386,7 @@ li {
 }
 
 .contact-adress>p {
+    font-size: 4vmin;
     transition: all 400ms;
 }
 
@@ -397,7 +414,7 @@ li {
 }
 
 .contact-emoji {
-    font-size: 70px;
+    font-size: 10vmin;
     cursor: pointer;
     transition: all 400ms;
 }
