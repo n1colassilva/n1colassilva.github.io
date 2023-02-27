@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --dark: #121212;
+    --half-dark: #373737;
+    --least-dark: #5b5b5b;
+    --grey: #ddd;
+    --purple: #7600e6;
+    --light-purple: #901aff;
+    --dark-purple: #420080;
+    --red: #ff4d4d;
+    --redder: #ff0000;
+    --red-light: #ff5f5f;
+    --blue: #4173ad;
+
+    --background-googleish-yellow: #FBBC05;
+    --background-googleish-blue: #4285F4;
+    --background-googleish-green: #34A853;
+    --background-googleish-red: #EA4335;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.info-carrousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+    text-align: center;
+}
+
+.right-nav-btn {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+
+.left-nav-btn {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+}
+
+#landing-page>h1 {
+    font-size: 50px;
+    margin: 100px 0px 50px 0px;
+    font-weight: 500;
+}
+
+#landing-page>h2 {
+    font-size: 75px;
+    margin: 50px 0px 100px 0px;
+
+}
+
+#description {
+    margin: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+#academic {
+    box-sizing: border-box;
+}
+
+#academic>h1 {
+    font-size: 3rem;
+    margin: 3.5rem 0;
+}
+
+#academic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+.academic-card {
+    border: 1px solid #FFF;
+    border-radius: 7px;
+}
+
+.academic-card>h2 {
+    font-size: 1.75rem;
+    margin: 0.5rem 0 6rem 0;
+    font-style: bold;
+}
+
+.academic-card>p {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0 0 1.2rem 0;
+}
+
+#professional-block-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 75%;
+}
+
+#professional>h1 {
+    font-size: 3rem;
+    margin: 3.5rem 0;
+}
+
+.professional-block {
+    border: 1px solid #FFF;
+    height: 200px;
+}
