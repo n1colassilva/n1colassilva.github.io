@@ -30,14 +30,23 @@ body {
     color: #ffffff;
 }
 
+#info-carrousel {
+    height: 100vh;
+}
+
 .info-carrousel-item {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
     height: 100vh;
+    width: 100vw;
     text-align: center;
+}
+
+.info-carrousel-item[data-status="after"] {
+    transform: translateX(50%) scale(0);
 }
 
 .right-nav-btn {
@@ -86,23 +95,60 @@ body {
     gap: 0.75rem;
     box-sizing: border-box;
     width: 75%;
+    height: 100%;
 }
 
 .academic-card {
-    border: 1px solid #FFF;
-    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .academic-card>h2 {
+    box-sizing: border-box;
+    padding: 1rem 0;
     font-size: 1.75rem;
-    margin: 0.5rem 0 6rem 0;
     font-style: bold;
+    background-color: #121212;
 }
 
-.academic-card>p {
+.academic-card-description {
+    position: relative;
     font-size: 1rem;
-    font-style: italic;
-    margin: 0 0 1.2rem 0;
+    background-color: #121212;
+    padding: 1rem;
+}
+
+.academic-card-description>h3 {
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 1rem 0;
+}
+
+.academic-card-description>p {
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#academic-card-1 {
+    background-image: url(images/academic/IFTM.png);
+}
+
+#academic-card-2 {
+    background-image: url(images/academic/ufu.png);
+}
+
+#professional {
+    box-sizing: border-box;
 }
 
 #professional-block-container {
@@ -119,6 +165,53 @@ body {
 }
 
 .professional-block {
-    border: 1px solid #FFF;
-    height: 200px;
+    /* border: 1px solid #FFF; */
+    height: 50vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.professional-block-text-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: left;
+    padding: 1rem;
+
+}
+
+#professional-block-1 {
+    background: url(images/experience/SunSaleSystem.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#professional-block-2 {
+    background: url(images/experience/paratudo-bebidas.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#professional-block-3 {
+    background: url(https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#professional-block-4 {
+    background: url(https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

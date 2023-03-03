@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    < id="info-carrousel">
 
-        <section id="landing-page" class="info-carrousel-item" data-index="0">
+    <div id="info-carrousel">
+        <section id="landing-page" class="info-carrousel-item" data-index="0" data-status="active">
             <h1>Nícolas</h1>
             <h2>Developer</h2>
             <div id="description">
@@ -23,103 +23,113 @@
                     Hello, i am a developer, who would've guessed!
                 </p>
             </div>
-            <button class="right-nav-btn nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
-            <button class="left-nav-btn nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
         </section>
 
-        <section id="academic" class="info-carrousel-item" data-index="1">
+        <section id="academic" class="info-carrousel-item" data-index="1" data-status="unkown">
 
             <h1> Academic </h1>
 
             <div id="academic-grid">
                 <article class="academic-card" id="academic-card-1">
-                    <h2>filler1</h2>
-                    <p>filler text</p>
+                    <h2>IFTM</h2>
+                    <div class="academic-card-description">
+                        <h3>Técnico em manutenção e suporte em informática</h3>
+                        <p>Curso técnico onde aprendi os básicos da programação em c, html, javascript css e bases de
+                            dados, além de hardware e sua manutenção. </p>
+                    </div>
                 </article>
                 <article class="academic-card" id="academic-card-2">
-                    <h2>filler2</h2>
-                    <p>filler text</p>
-                </article>
-                <article class="academic-card" id="academic-card-3">
-                    <h2>filler3</h2>
-                    <p>filler text</p>
-                </article>
-                <article class="academic-card" id="academic-card-4">
-                    <h2>filler4</h2>
-                    <p>filler text</p>
+                    <h2>UFU - cursando</h2>
+                    <div class="academic-card-description">
+                        <h3>Bacharelado em Sistemas de Informação</h3>
+                        <p>Recentemente passei, animado para aprender!</p>
+                    </div>
                 </article>
             </div>
-            <button class="right-nav-btn nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
-            <button class="left-nav-btn nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
         </section>
 
-        <section id="professional" class="info-carrousel-item" data-index="2">
+        <section id="professional" class="info-carrousel-item" data-index="2" data-status="unkown">
 
             <h1>Previous experiences</h1>
-            
+
             <div id="professional-block-container">
-                <article class="professional-block">
-                    <h1>Filler Title</h1>
-                    <p>filler text</p>
+                <article class="professional-block" id="professional-block-1">
+                    <div class="professional-block-text-container">
+                        <h2>SunSale System - Estágio</h2>
+                        <p>Desenvolvimento de front end</p>
+                    </div>
                 </article>
-                <article class="professional-block">
-                    <h1>Filler Title</h1>
-                    <p>filler text</p>
+                <article class="professional-block" id="professional-block-2">
+                    <div class="professional-block-text-container">
+                        <h2>Paratudo Bebidas - Aprendiz</h2>
+                        <p>Suporte de TI</p>
+                    </div>
                 </article>
-                <article class="professional-block">
-                    <h1>Filler Title</h1>
-                    <p>filler text</p>
+                <article class="professional-block" id="professional-block-3">
+                    <div class="professional-block-text-container">
+                        <h2>Sua Empresa</h2>
+                        <p>Pode ser a próxima!</p>
+                    </div>
                 </article>
-                <article class="professional-block">
-                    <h1>Filler Title</h1>
-                    <p>filler text</p>
+                <article class="professional-block" id="professional-block-4">
+                    <div class="professional-block-text-container">
+                        <h2>Sua Empresa</h2>
+                        <p>Pode ser a próxima!</p>
+                    </div>
                 </article>
-                <button class="right-nav-btn nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
-                <button class="left-nav-btn nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+
+                <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
             </div>
         </section>
 
+    </div>
 
-        <adress id="contact" class="info-carrousel-item" data-index="3">
-            <h1>amonger dot cum</h1>
-            <a>amogus.com</a>
-            <a>amogus.com</a>
-            <a>amogus.com</a>
-            <a>amogus.com</a>
-            <a>amogus.com</a>
-            <button class="right-nav-btn nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
-            <button class="left-nav-btn nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
-        </adress>
+    <div id="projects">
+        <div class="project" id="project-1">
+            <h1>1 project title</h1>
+            <img src="" alt="">
+            <p>more filler text, hooray</p>
         </div>
-
-        <div id="projects">
-            <div class="project" id="project-1">
-                <h1>1 project title</h1>
-                <img src="" alt="">
-                <p>more filler text, hooray</p>
-            </div>
-            <div class="project" id="project-2">
-                <h1>2 project title</h1>
-                <img src="" alt="">
-                <p>more filler text, hooray</p>
-            </div>
-            <div class="project" id="project-3">
-                <h1>3 project title</h1>
-                <img src="" alt="">
-                <p>more filler text, hooray</p>
-            </div>
-            <div class="project" id="project-4">
-                <h1>4 project title</h1>
-                <img src="" alt="">
-                <p>more filler text, hooray</p>
-            </div>
-            <div class="project" id="project-5">
-                <h1>5 project title</h1>
-                <img src="" alt="">
-                <p>more filler text, hooray</p>
-            </div>
+        <div class="project" id="project-2">
+            <h1>2 project title</h1>
+            <img src="" alt="">
+            <p>more filler text, hooray</p>
         </div>
-        <script src="portfolio.js"></script>
+        <div class="project" id="project-3">
+            <h1>3 project title</h1>
+            <img src="" alt="">
+            <p>more filler text, hooray</p>
+        </div>
+        <div class="project" id="project-4">
+            <h1>4 project title</h1>
+            <img src="" alt="">
+            <p>more filler text, hooray</p>
+        </div>
+        <div class="project" id="project-5">
+            <h1>5 project title</h1>
+            <img src="" alt="">
+            <p>more filler text, hooray</p>
+        </div>
+    </div>
+    <script src="portfolio.js"></script>
 </body>
 
 </html>
