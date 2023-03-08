@@ -49,6 +49,10 @@ body {
     transform: translateX(50%) scale(0);
 }
 
+.info-carrousel-item[data-status="before"] {
+    transform: translateX(-50%) scale(0);
+}
+
 .info-carrousel-item[data-status="unkown"] {
     transform: scale(0);
 }
