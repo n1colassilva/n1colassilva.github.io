@@ -235,38 +235,74 @@ body {
 
 #projects {}
 
-.project {
+#projects>h1 {
+    font-size: 3rem;
+    margin: 3.5rem 0;
+}
+
+#projects-container {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    margin: 2.5rem 0 2.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.project-image {
-    aspect-ratio: 5/3;
-    width: 30rem;
-    padding: 0 2rem 0 2rem;
-    object-fit: cover;
+.project {
+    width: 75vw;
+    height: 5rem;
+    min-height: 2em;
+    transition: ease-in-out 1s;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: start;
 }
 
-.project-titles {
-    text-align: left;
+.project:hover {
+    max-height: 25rem;
+    height: 25rem;
 }
 
 .project-text {
-    width: 100%;
-    text-align: justify;
-    padding: 0 2rem 0 2rem;
+    margin: 1rem 3rem;
 }
 
-#project-3,
+.project-text>h1 {
+    margin-bottom: 3rem;
+    font-size: 2em;
+}
+
+#project-1 {
+    background: url(https://w0.peakpx.com/wallpaper/648/659/HD-wallpaper-wizards-wizards-background-page-5-for-your-mobile-tablet-explore-wizard-mystical-mystical-mystical-for-wizard-cool-wizard.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project-2 {
+    background: url(https://w0.peakpx.com/wallpaper/792/175/HD-wallpaper-fantasy-wizard-book-candle-magic-man-skull-%E2%80%A2-for-you-cool-wizard.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project-3 {
+    background: url(https://i1.sndcdn.com/artworks-3dJXgPZbnHqvOCzQ-iZq4qg-t500x500.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #project-4 {
-    flex-direction: row-reverse;
-    text-align: right;
-    text-justify: distribute;
-}
+    background: url(https://static.tvtropes.org/pmwiki/pub/images/bc2.jpg);
 
-.project-titles {
-    display: flex;
-    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
