@@ -32,6 +32,8 @@ const rightButtonClick = () => {
     const nextIndex = carrouselIndex + 1 <= carrouselItems.length - 1 ? carrouselIndex + 1 : 0;
 
     const currentIndex = document.querySelector(`[data-index="${carrouselIndex}"]`);
+    const previousIndexTag = document.querySelector(`[data-index="${previousIndex}"]`);
+    const nextIndexTag = document.querySelector(`[data-index="${nextIndex}"]`);
 
 
     // the magic starts
@@ -39,8 +41,8 @@ const rightButtonClick = () => {
     // just make it be gone and bring in the new one
 
     currentIndex.dataset.status = "previous"; // <- makes sure it goes left
-    nextIndex.dataset.status = "current"; //     <- and this from the right
-    previousIndex.dataset.status = "previous"//  <- leaves previous one as previous to avoid problems
+    nextIndexTag.dataset.status = "current"; //     <- and this from the right
+    previousIndexTag.dataset.status = "unknown"//  <- leaves previous one as previous to avoid problems
 
     //update the current index "global" variable
     carrouselIndex = nextIndex;
@@ -63,7 +65,7 @@ const leftButtonClick = () => {
     nextIndex.dataset.status = "next"//          <- leaves the 2nd next as next. Why? idk!
 
     //update variable!
-    carrouselIndex = previousIndex
+    carrouselIndex = previousIndex;
     console.log(carrouselIndex);
 
 
