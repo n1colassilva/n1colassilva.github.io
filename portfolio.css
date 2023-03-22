@@ -53,27 +53,34 @@ body {
     transition: 1s;
 }
 
+
 .info-carrousel-item[data-status="current"] {
-    position: static;
+    position: absolute;
     height: 100%;
     visibility: visible;
+    transition: 1s;
+    transform: translateX(0%);
 }
 
 .info-carrousel-item[data-status="next"] {
-    transform: translateX(100%);
+    visibility: visible;
     position: absolute;
+    transition: 0s;
+    transform: translateX(100%);
 }
 
 .info-carrousel-item[data-status="previous"] {
-    transform: translateX(-100%);
+    visibility: visible;
     position: absolute;
+    transition: 1s;
+    transform: translateX(-100%);
 }
 
 .info-carrousel-item[data-status="unknown"] {
     transform: scale(0);
     position: absolute;
-    visibility: hidden;
     transition: 0s;
+    /* visibility: hidden; */
 }
 
 .right-nav-btn {

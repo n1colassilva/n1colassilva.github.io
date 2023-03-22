@@ -3,50 +3,36 @@ const carrouselItems = document.getElementsByClassName("info-carrousel-item");
 let carrouselIndex = 0;
 
 const rightButtonClick = () => {
+
     /*
-    // Bump active index
-
-    const nextCarrouselIndex = carrouselIndex + 1 <= carrouselItems.length - 1 ? carrouselIndex + 1 : 0;
-
-    const currentCarrouselItem = document.querySelector(`[data-index="${carrouselIndex}"]`),
-        nextCarrouselItem = document.querySelector(`[data-index="${nextCarrouselIndex}"]`);
-
-    // Active item becomes after
-
-    currentCarrouselItem.dataset.status = "after";
-
-    // Next item becomes active 
-
-    nextCarrouselItem.dataset.status = "active"
-
-    carrouselIndex = nextCarrouselIndex;
-
-    console.log(carrouselIndex);
+    determining what is the previous index and its element 
+    (if current-1 < 0 then its the last one, else its just current -1)
     */
+    const previousIndexNumber = carrouselIndex - 1 < 0 ? carrouselItems.length - 1 : carrouselIndex - 1;
+    const previousIndex = document.querySelector(`[data-index="${previousIndexNumber}"]`);
+    console.log(`previous index: ${previousIndexNumber}`);
 
-    // Saving previous item for trash setting purposes
-    // if its lower than zero then bring it to the last item, if not then just go current-1
-    const previousIndex = carrouselIndex - 1 < 0 ? carrouselIndex.length - 1 : carrouselIndex - 1;
-
-    // Determines which item is next, if the next is non-existant then it loops back to number 0 
-    const nextIndex = carrouselIndex + 1 <= carrouselItems.length - 1 ? carrouselIndex + 1 : 0;
-
+    //current index is just taken from the global variable
+    //later on its updated, thats why we can rely on it
     const currentIndex = document.querySelector(`[data-index="${carrouselIndex}"]`);
-    const previousIndexTag = document.querySelector(`[data-index="${previousIndex}"]`);
-    const nextIndexTag = document.querySelector(`[data-index="${nextIndex}"]`);
+    console.log(`current index: ${currentIndex.dataset.index}`);
 
+    // if the next + 1 < the highest index then the next is just the current + 1, if not then it loops back to 0
+    const nextIndexNumber = carrouselIndex + 1 < carrouselItems.length ? carrouselIndex + 1 : 0;
+    const nextIndex = document.querySelector(`[data-index="${nextIndexNumber}"]`);
+    console.log(`next index: ${nextIndexNumber}`);
 
-    // the magic starts
-    // make the current become the previous, make the next the current one
-    // just make it be gone and bring in the new one
+    const nextNextIndexNumber = nextIndexNumber + 1 <= carrouselItems.length - 1 ? nextIndexNumber + 1 : 0;
+    const nextNextIndex = document.querySelector(`[data-index="${nextNextIndexNumber}"]`);
+    console.log(`the next next index: ${nextNextIndexNumber}`);
 
-    currentIndex.dataset.status = "previous"; // <- makes sure it goes left
-    nextIndexTag.dataset.status = "current"; //     <- and this from the right
-    previousIndexTag.dataset.status = "unknown"//  <- leaves previous one as previous to avoid problems
+    previousIndex.dataset.status = "previous"
+    currentIndex.dataset.status = "previous"
+    nextIndex.dataset.status = "current"
+    nextNextIndex.dataset.status = "next"
 
-    //update the current index "global" variable
-    carrouselIndex = nextIndex;
-    console.log(carrouselIndex);
+    // Update the current index variable
+    carrouselIndex = nextIndexNumber;
 }
 
 // similar  code as rightButtonClick, but change the status because we are going back
@@ -65,7 +51,7 @@ const leftButtonClick = () => {
     nextIndex.dataset.status = "next"//          <- leaves the 2nd next as next. Why? idk!
 
     //update variable!
-    carrouselIndex = previousIndex;
+    carrouselIndex = previousIndex
     console.log(carrouselIndex);
 
 
