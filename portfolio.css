@@ -32,7 +32,7 @@ body {
     width: 100%;
 }
 
-#info-carrousel {
+#info-carousel {
     min-height: 100vh;
     overflow: hidden;
 
@@ -41,7 +41,7 @@ body {
     background-size: 5vmin 5vmin;
 }
 
-.info-carrousel-item {
+.info-carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@ body {
 }
 
 
-.info-carrousel-item[data-status="current"] {
+.info-carousel-item[data-status="current"] {
     position: absolute;
     height: 100%;
     visibility: visible;
@@ -62,29 +62,38 @@ body {
     transform: translateX(0%);
 }
 
-.info-carrousel-item[data-status="next"] {
-    visibility: visible;
+.info-carousel-item[data-status="next"] {
+    visibility: hidden;
     position: absolute;
-    transition: 1s;
+    transition: 0s;
     transform: translateX(100%);
 }
 
-.info-carrousel-item[data-status="previous"] {
+.info-carousel-item[data-status="previous"] {
+    visibility: hidden;
+    position: absolute;
+    transition: 0s;
+    transform: translateX(-100%);
+}
+
+.info-carousel-item[data-status="previous-from-current"] {
     visibility: visible;
     position: absolute;
     transition: 1s;
     transform: translateX(-100%);
 }
 
-info-carrousel-item[data-status="trantisitoning"] {
-    visibility: hidden;
+.info-carousel-item[data-status="next-from-current"] {
+    visibility: visible;
     position: absolute;
-    transition: 0s;
+    transition: 1s;
+    transform: translateX(100%);
 }
 
-.info-carrousel-item[data-status="unknown"] {
-    visibility: hidden;
+.info-carousel-item[data-status="unknown"] {
+    display: none;
     position: absolute;
+    transform: scale(0);
     transition: 0s;
     /* visibility: hidden; */
 }
