@@ -13,26 +13,27 @@
 </head>
 
 <body>
-
+    <div id="mouse-trailer"></div>
+    <div id="mouse-blur"></div>
     <div id="info-carousel">
         <section id="landing-page" class="info-carousel-item" data-index="0" data-status="current">
             <h1>Nícolas</h1>
             <h2>Desenvolvedor</h2>
             <div id="description">
                 <p>
-                    Olá, este é meu site! Me conheça através de alguns pseudo-slides <span
-                        id="waving-arms">\(^︶^)</span>
+                    Olá, este é meu site! Me conheça através de alguns pseudo-slides
                 </p>
+                <span id="waving-arms">│(^︶^)</span>
             </div>
             <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
             <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
         </section>
 
-        <section id="academic" class="info-carousel-item" data-index="1" data-status="unknown">
+        <section id="academic" class="info-carousel-item" data-index="1" data-status="next">
 
             <h1> Acadêmico </h1>
 
@@ -53,10 +54,10 @@
                 </article>
             </div>
             <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
             <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
         </section>
 
@@ -91,23 +92,24 @@
                 </article>
 
                 <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
-                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
             </div>
         </section>
 
-        <section id="projects" class="info-carousel-item" data-index="3" data-status="unknown">
+        <section id="projects" class="info-carousel-item" data-index="3" data-status="previous">
             <h1>Projetos</h1>
             <div id="projects-container">
                 <div class="project" id="project-1">
                     <div class="project-text">
                         <h1>Este site!</h1>
                         <p>Criei este site para aprender coisas novas e o clássico mostrar do que sou capaz, feito
-                            durante umas horas por dia ao longo de um mês, inclui vários efeitos que aprendi a criar</p>
+                            durante umas horas por dia ao longo de um mês, inclui vários efeitos que aprendi a criar
+                        </p>
                     </div>
                 </div>
                 <div class="project" id="project-2">
@@ -120,8 +122,10 @@
                             <li>E acredite ou não, você, caro leitor, pode editar o que escreveu</li>
                         </ul>
                         <p>Realmente um avanço na área de web design</p>
-                        <p>algo de interessante que comecei a fazer neste projeto é usar variáveis de css para criar uma
-                            paleta de cores sem ter que incessantemente copiar e colar de outras partes, também facilita
+                        <p>algo de interessante que comecei a fazer neste projeto é usar variáveis de css para criar
+                            uma
+                            paleta de cores sem ter que incessantemente copiar e colar de outras partes, também
+                            facilita
                             muito reusar nos próximos para manter uma identidade visual consistente</p>
                     </div>
                 </div>
@@ -140,10 +144,10 @@
             </div>
 
             <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
-                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
             <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
 
         </section>
@@ -151,6 +155,7 @@
     </div>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/text-effects.js"></script>
+    <script src="scripts/mouse-effects.js"></script>
 </body>
 
 </html>
