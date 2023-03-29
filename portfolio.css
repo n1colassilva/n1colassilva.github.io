@@ -120,14 +120,14 @@ body {
 
 .right-nav-btn {
     position: absolute;
-    right: 3%;
-    top: 50%;
+    right: 0%;
+    /* top: 50%; */
 }
 
 .left-nav-btn {
     position: absolute;
-    left: 2%;
-    top: 50%;
+    left: 0%;
+    /* top: 50%; */
 }
 
 .nav-btn {
@@ -137,11 +137,15 @@ body {
     align-items: center;
     font-size: 3rem;
     color: #ddd;
+    background-color: #12121280;
+    height: 100%;
+    width: 5%;
 }
+
+.button-symbol {}
 
 button {
     border: none;
-    background-color: #dddddd00;
 }
 
 #landing-page>h1 {
@@ -247,6 +251,12 @@ button {
 
 #professional {
     box-sizing: border-box;
+    overflow: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 #professional-block-container {
