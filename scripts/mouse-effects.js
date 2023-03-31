@@ -6,5 +6,5 @@ window.onpointermove = event => {
     mouseTrailer.animate({
         left: `${clientX}px`,
         top: `${clientY}px`
-    }, { duration: 9000, fill: "forwards" });
+    }, { duration: 100000, fill: "forwards" });
 }
