@@ -20,27 +20,26 @@ let carouselIndex = 0;
 
 const rightButtonClick = () => {
 
-    /*
-    determining what is the previous index and its element 
-    (if current-1 < 0 then its the last one, else its just current -1)
-    */
+
+    //determining what is the previous index and its element 
+    //(if current-1 < 0 then its the last one, else its just current -1)
     const previousIndexNumber = carouselIndex - 1 < 0 ? carouselItems.length - 1 : carouselIndex - 1;
     const previousIndex = document.querySelector(`[data-index="${previousIndexNumber}"]`);
-    // console.log(`previous index: ${previousIndexNumber}`);
+
 
     //current index is just taken from the global variable
     //later on its updated, thats why we can rely on it
     const currentIndex = document.querySelector(`[data-index="${carouselIndex}"]`);
-    // console.log(`current index: ${currentIndex.dataset.index}`);
+
 
     // if the next + 1 < the highest index then the next is just the current + 1, if not then it loops back to 0
     const nextIndexNumber = carouselIndex + 1 < carouselItems.length ? carouselIndex + 1 : 0;
     const nextIndex = document.querySelector(`[data-index="${nextIndexNumber}"]`);
-    // console.log(`next index: ${nextIndexNumber}`);
+
 
     const nextNextIndexNumber = nextIndexNumber + 1 <= carouselItems.length - 1 ? nextIndexNumber + 1 : 0;
     const nextNextIndex = document.querySelector(`[data-index="${nextNextIndexNumber}"]`);
-    // console.log(`the next next index: ${nextNextIndexNumber}`);
+
 
     previousIndex.dataset.status = "unknown";
     currentIndex.dataset.status = "previous-from-current"
@@ -62,21 +61,21 @@ const leftButtonClick = () => {
     */
     const previousIndexNumber = carouselIndex - 1 < 0 ? carouselItems.length - 1 : carouselIndex - 1;
     const previousIndex = document.querySelector(`[data-index="${previousIndexNumber}"]`);
-    // console.log(`previous index: ${previousIndexNumber}`);
+
 
     const previousPreviousIndexNumber = previousIndexNumber - 1 < 0 ? carouselItems.length - 1 : previousIndexNumber - 1;
     const previousPreviousIndex = document.querySelector(`[data-index="${previousPreviousIndexNumber}"]`);
-    // console.log(`the next next index: ${previousPreviousIndexNumber}`);
+
 
     //current index is just taken from the global variable
     //later on its updated, thats why we can rely on it
     const currentIndex = document.querySelector(`[data-index="${carouselIndex}"]`);
     console.log(`current index: ${currentIndex.dataset.index}`);
 
+
     // if the next + 1 < the highest index then the next is just the current + 1, if not then it loops back to 0
     const nextIndexNumber = carouselIndex + 1 < carouselItems.length ? carouselIndex + 1 : 0;
     const nextIndex = document.querySelector(`[data-index="${nextIndexNumber}"]`);
-    // console.log(`next index: ${nextIndexNumber}`);
 
 
     previousPreviousIndex.dataset.status = "previous"
