@@ -1,413 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
-    --dark: #121212;
-    --half-dark: #373737;
-    --least-dark: #5b5b5b;
-    --grey: #ddd;
-    --purple: #7600e6;
-    --light-purple: #901aff;
-    --dark-purple: #420080;
-    --red: #ff4d4d;
-    --redder: #ff0000;
-    --red-light: #ff5f5f;
-    --blue: #4173ad;
+	--dark: #121212;
+	--half-dark: #373737;
+	--least-dark: #5b5b5b;
+	--grey: #ddd;
+	--purple: #7600e6;
+	--light-purple: #901aff;
+	--dark-purple: #420080;
+	--red: #ff4d4d;
+	--redder: #ff0000;
+	--red-light: #ff5f5f;
+	--blue: #4173ad;
 
-    --background-googleish-yellow: #FBBC05;
-    --background-googleish-blue: #4285F4;
-    --background-googleish-green: #34A853;
-    --background-googleish-red: #EA4335;
+	--background-googleish-yellow: #fbbc05;
+	--background-googleish-blue: #4285f4;
+	--background-googleish-green: #34a853;
+	--background-googleish-red: #ea4335;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Fira Code', monospace;
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Fira Code", monospace;
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
-    overflow: hidden;
-    width: 100%;
+	background-color: #121212;
+	color: #ffffff;
+	overflow: hidden;
+	width: 100%;
 }
 
 #mouse-trailer {
-    background-color: white;
-    height: 40vmax;
-    aspect-ratio: 1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, var(--purple), rgb(0, 255, 170));
-    opacity: 0.3;
+	background-color: white;
+	height: 40vmax;
+	aspect-ratio: 1;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	border-radius: 50%;
+	background: linear-gradient(to right, var(--purple), rgb(0, 255, 170));
+	opacity: 0.3;
 }
 
-.mouse-trailer-type1{
-    background: linear-gradient(to right, var(--purple), rgb(0, 255, 170));
+.mouse-trailer-type1 {
+	background: linear-gradient(to right, var(--purple), rgb(0, 255, 170));
 }
 
 #mouse-blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    backdrop-filter: blur(20vmax);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	backdrop-filter: blur(20vmax);
 }
 
 #info-carousel {
-    min-height: 100vh;
-    overflow: hidden;
+	min-height: 100vh;
+	overflow: hidden;
 }
 
 .info-carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    /* justify-content: center; */
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    transition: 1s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	/* justify-content: center; */
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	transition: 1s;
 }
 
-
 .info-carousel-item[data-status="current"] {
-    position: absolute;
-    height: 100%;
-    visibility: visible;
-    transition: 1s;
-    transform: translateX(0%);
+	position: absolute;
+	height: 100%;
+	visibility: visible;
+	transition: 1s;
+	transform: translateX(0%);
 }
 
 .info-carousel-item[data-status="next"] {
-    visibility: hidden;
-    position: absolute;
-    transition: 0s;
-    transform: translateX(100%);
+	visibility: hidden;
+	position: absolute;
+	transition: 0s;
+	transform: translateX(100%);
 }
 
 .info-carousel-item[data-status="previous"] {
-    visibility: hidden;
-    position: absolute;
-    transition: 0s;
-    transform: translateX(-100%);
+	visibility: hidden;
+	position: absolute;
+	transition: 0s;
+	transform: translateX(-100%);
 }
 
 .info-carousel-item[data-status="previous-from-current"] {
-    visibility: visible;
-    position: absolute;
-    transition: 1s;
-    transform: translateX(-100%);
+	visibility: visible;
+	position: absolute;
+	transition: 1s;
+	transform: translateX(-100%);
 }
 
 .info-carousel-item[data-status="next-from-current"] {
-    visibility: visible;
-    position: absolute;
-    transition: 1s;
-    transform: translateX(100%);
+	visibility: visible;
+	position: absolute;
+	transition: 1s;
+	transform: translateX(100%);
 }
 
 .info-carousel-item[data-status="unknown"] {
-    display: none;
-    position: absolute;
-    transform: scale(0);
-    transition: 0s;
-    /* visibility: hidden; */
+	display: none;
+	position: absolute;
+	transform: scale(0);
+	transition: 0s;
+	/* visibility: hidden; */
 }
 
 .right-nav-btn {
-    position: absolute;
-    right: 0%;
-    top: 50%;
+	position: absolute;
+	right: 0%;
+	top: 50%;
 }
 
 .left-nav-btn {
-    position: absolute;
-    left: 0%;
-    top: 50%;
+	position: absolute;
+	left: 0%;
+	top: 50%;
 }
 
 .nav-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    color: #ddd;
-    background-color: #12121200;
-    /* height: 100%; */
-    width: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	color: #fff;
+	background-color: #12121200;
+	/* height: 100%; */
+	width: 5%;
 }
 
 button {
-    border: none;
+	border: none;
 }
 
-#landing-page>h1 {
-    font-size: 50px;
-    margin: 100px 0px 50px 0px;
-    font-weight: 500;
+#landing-page > h1 {
+	font-size: 50px;
+	margin: 100px 0px 50px 0px;
+	font-weight: 500;
 }
 
-#landing-page>h2 {
-    font-size: 75px;
-    margin: 50px 0px 100px 0px;
-
+#landing-page > h2 {
+	font-size: 75px;
+	margin: 50px 0px 100px 0px;
 }
 
 #waving-arms {
-    display: inline-block;
-    width: 4.5em;
-    text-align: right;
-    margin-top: 25px;
+	display: inline-block;
+	width: 4.5em;
+	text-align: right;
+	margin-top: 25px;
 }
 
 #description {
-    margin: 20px;
-    font-weight: 400;
-    font-size: 20px;
+	margin: 20px;
+	font-weight: 400;
+	font-size: 20px;
 }
-
 
 #academic {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: scroll;
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
 }
 
-#academic>h1 {
-    font-size: 3rem;
-    margin: 1.5rem 0 1rem 0;
+#academic > h1 {
+	font-size: 3rem;
+	margin: 1.5rem 0 1rem 0;
 }
 
-#academic>h2 {
-    font-size: 1.5rem;
-    margin: 0.75rem 0 1.75rem 0;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
+#academic > h2 {
+	font-size: 1.5rem;
+	margin: 0.75rem 0 1.75rem 0;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 25px;
 }
 
-#academic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    box-sizing: border-box;
-    width: 75%;
-    height: 27.5rem;
+#academic-bg-wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: 80%;
+	padding: 8rem;
+	background-color: #373737cf;
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
 }
 
 .academic-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    height: 100%;
-    width: 100%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.academic-card>h2 {
-    box-sizing: border-box;
-    padding: 1rem 0;
-    font-size: 1.75rem;
-    font-style: bold;
-    background-color: #121212;
+.academic-card > h2 {
+	box-sizing: border-box;
+	padding: 1rem 0;
+	font-size: 1.75rem;
+	font-style: bold;
+	background-color: #121212;
 }
 
 .academic-card-description {
-    position: relative;
-    font-size: 1rem;
-    background-color: #121212;
-    padding: 1rem;
+	position: relative;
+	font-size: 1rem;
+	background-color: #121212;
+	padding: 1rem;
 }
 
-.academic-card-description>h3 {
-    font-weight: 500;
-    text-align: left;
-    margin: 0 0 1rem 0;
+.academic-card-description > h3 {
+	font-weight: 500;
+	text-align: left;
+	margin: 0 0 1rem 0;
 }
 
-.academic-card-description>p {
-    text-align: justify;
-    font-weight: 400;
-    font-size: 1rem;
+.academic-card-description > p {
+	text-align: justify;
+	font-weight: 400;
+	font-size: 1rem;
 }
 
 #academic-card-1 {
-    background-image: url(images/academic/IFTM.png);
+	background-image: url(images/academic/IFTM.png);
 }
 
 #academic-card-2 {
-    background-image: url(images/academic/ufu.png);
+	background-image: url(images/academic/ufu.png);
 }
 
 #professional {
-    box-sizing: border-box;
-    overflow: scroll;
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+	box-sizing: border-box;
+	overflow: scroll;
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
 }
 
 #professional-block-container {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 75%;
-    margin-bottom: 5rem;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+	width: 75%;
+	margin-bottom: 5rem;
 }
 
-#professional>h1 {
-    font-size: 3rem;
-    margin: 3.5rem 0;
+#professional > h1 {
+	font-size: 3rem;
+	margin: 3.5rem 0;
 }
 
 .professional-block {
-    /* border: 1px solid #FFF; */
-    height: 50vh;
+	/* border: 1px solid #FFF; */
+	height: 50vh;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .professional-block-text-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    text-align: left;
-    padding: 1rem;
-
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	text-align: left;
+	padding: 1rem;
 }
 
 #professional-block-1 {
-    background: url(images/experience/SunSaleSystem.png);
+	background: url(images/experience/SunSaleSystem.png);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #professional-block-2 {
-    background: url(images/experience/paratudo-bebidas.jpg);
+	background: url(images/experience/paratudo-bebidas.jpg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #professional-block-3 {
-    background: url(https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
+	background: url(https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #professional-block-4 {
-    background: url(https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
+	background: url(https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #projects {
-    overflow: scroll;
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+	overflow: scroll;
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 #projects::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
-
-#projects>h1 {
-    font-size: 3rem;
-    margin: 3.5rem 0;
+#projects > h1 {
+	font-size: 3rem;
+	margin: 3.5rem 0;
 }
 
 #projects-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
 }
 
 .project {
-    width: 75vw;
-    height: 5rem;
-    min-height: 2em;
-    transition: ease-in-out 1s;
-    overflow: hidden;
+	width: 75vw;
+	height: 5rem;
+	min-height: 2em;
+	transition: ease-in-out 1s;
+	overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: start;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: start;
 }
 
 .project:hover {
-    max-height: 25rem;
-    height: 25rem;
-    ;
+	max-height: 25rem;
+	height: 25rem;
 }
 
 .project-text {
-    margin: 1rem 3rem;
-    text-align: left;
+	margin: 1rem 3rem;
+	text-align: left;
 }
 
-.project-text>h1 {
-    margin-bottom: 3rem;
-    font-size: 2em;
+.project-text > h1 {
+	margin-bottom: 3rem;
+	font-size: 2em;
 }
 
 #project-1 {
-    background: url(https://w0.peakpx.com/wallpaper/648/659/HD-wallpaper-wizards-wizards-background-page-5-for-your-mobile-tablet-explore-wizard-mystical-mystical-mystical-for-wizard-cool-wizard.jpg);
+	background: url(https://w0.peakpx.com/wallpaper/648/659/HD-wallpaper-wizards-wizards-background-page-5-for-your-mobile-tablet-explore-wizard-mystical-mystical-mystical-for-wizard-cool-wizard.jpg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #project-2 {
-    background: url(https://w0.peakpx.com/wallpaper/792/175/HD-wallpaper-fantasy-wizard-book-candle-magic-man-skull-%E2%80%A2-for-you-cool-wizard.jpg);
+	background: url(https://w0.peakpx.com/wallpaper/792/175/HD-wallpaper-fantasy-wizard-book-candle-magic-man-skull-%E2%80%A2-for-you-cool-wizard.jpg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #project-3 {
-    background: url(https://i1.sndcdn.com/artworks-3dJXgPZbnHqvOCzQ-iZq4qg-t500x500.jpg);
+	background: url(https://i1.sndcdn.com/artworks-3dJXgPZbnHqvOCzQ-iZq4qg-t500x500.jpg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #project-4 {
-    background: url(https://static.tvtropes.org/pmwiki/pub/images/bc2.jpg);
+	background: url(https://static.tvtropes.org/pmwiki/pub/images/bc2.jpg);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
