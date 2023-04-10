@@ -1,9 +1,18 @@
 const mouseTrailer = document.getElementById("mouse-trailer");
+const mouseTrailerBack = document.getElementById("mouse-trailer-back");
+//needed a real element instead of a pseudo class for the transition effects
 
 window.onpointermove = (event) => {
 	const { clientX, clientY } = event;
 
 	mouseTrailer.animate(
+		{
+			left: `${clientX}px`,
+			top: `${clientY}px`,
+		},
+		{ duration: 3000, fill: "forwards" }
+	);
+	mouseTrailerBack.animate(
 		{
 			left: `${clientX}px`,
 			top: `${clientY}px`,
@@ -34,26 +43,49 @@ const mouseColorPlus = () => {
 	// i'd like to thank the css team for not having a way to handle this
 	// logic is as follows
 
-	rootStyle.setProperty("--trailer-opacity", 1); // set the current gradient to full opacity
-	rootStyle.setProperty("--trailer-before-opacity", 0); // before pseudoelem to no opacity
+	setTimeout(() => {
+		console.log("teste:setting up gradients opacity");
 
-	rootStyle.setProperty("--trailer-color-1", trailerColorOld1); // current keeps its colors
-	rootStyle.setProperty("--trailer-color-2", trailerColorOld2);
+		// set the current gradient to full opacity
+		// back to no opacity
+		rootStyle.setProperty("--trailer-opacity", 1);
+		rootStyle.setProperty("--trailer-before-opacity", 0);
 
-	rootStyle.setProperty("--trailer-color-old-1", trailerColor1); // before gets the new ones
-	rootStyle.setProperty("--trailer-color-old-2", trailerColor2);
+		console.log("teste2: current gets its old colors");
 
-	rootStyle.setProperty("--trailer-opacity", 0); // current to 0
-	rootStyle.setProperty("--trailer-before-opacity", 1); // before's opacity is set to 1
+		// current keeps its colors
+		rootStyle.setProperty("--trailer-color-1", trailerColorOld1);
+		rootStyle.setProperty("--trailer-color-2", trailerColorOld2);
+	}, 1000);
 
-	// before now visible, current is not
+	setTimeout(() => {
+		console.log("teste3: before gets new ones");
 
-	rootStyle.setProperty("--trailer-color-1", trailerColor1); // give current the new colors
-	rootStyle.setProperty("--trailer-color-2", trailerColor2);
+		// back gets the new ones
+		rootStyle.setProperty("--trailer-color-old-1", trailerColor1);
+		rootStyle.setProperty("--trailer-color-old-2", trailerColor2);
 
-	rootStyle.setProperty("--trailer-opacity", 1); // real one is visible
-	rootStyle.setProperty("--trailer-before-opacity", 0); // before opacity to 0
+		console.log("teste4: opacity current 0 before 1");
 
+		// current to 0
+		// back's opacity is set to 1
+		rootStyle.setProperty("--trailer-opacity", 0);
+		rootStyle.setProperty("--trailer-before-opacity", 1);
+	}, 2000);
+	// back now visible, current is not
+	setTimeout(() => {
+		console.log("teste5: real element gets new colors");
+		// give current the new colors
+		rootStyle.setProperty("--trailer-color-1", trailerColor1);
+		rootStyle.setProperty("--trailer-color-2", trailerColor2);
+
+		console.log("teste6: real is made visible, before invisible");
+
+		// real one is visible
+		// back opacity to 0
+		rootStyle.setProperty("--trailer-opacity", 1);
+		rootStyle.setProperty("--trailer-before-opacity", 0);
+	}, 3000);
 	//i spent 3 days on this, shoutout to christ for the holiday
 };
 
