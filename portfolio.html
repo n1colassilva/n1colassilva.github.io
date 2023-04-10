@@ -16,10 +16,11 @@
     <div id="mouse-trailer"></div>
     <div id="mouse-blur"></div>
     <div id="info-carousel">
-        <section id="landing-page" class="info-carousel-item" data-index="0" data-status="current">
+        <section id="landing-page" class="info-carousel-item" data-index="0" data-status="current"
+            data-trailer-color="red,white">
             <h1>Nícolas</h1>
             <h2>Desenvolvedor</h2>
-            <div id="description">
+            <div id=" description">
                 <p>
                     Olá, este é meu site! Me conheça através de alguns pseudo-slides
                 </p>
@@ -27,7 +28,8 @@
             </div>
         </section>
 
-        <section id="academic" class="info-carousel-item" data-index="1" data-status="next">
+        <section id="academic" class="info-carousel-item" data-index="1" data-status="next"
+            data-trailer-color="orange,white">
             <h1> Acadêmico </h1>
             <h2>Onde aprendi o que sei</h2>
             <div id="academic-bg-wrapper">
@@ -46,7 +48,8 @@
             </div>
         </section>
 
-        <section id="professional" class="info-carousel-item" data-index="2" data-status="unknown">
+        <section id="professional" class="info-carousel-item" data-index="2" data-status="unknown"
+            data-trailer-color="blue,purple">
 
             <h1>Previous experiences</h1>
 
@@ -78,7 +81,8 @@
             </div>
         </section>
 
-        <section id="projects" class="info-carousel-item" data-index="3" data-status="previous">
+        <section id="projects" class="info-carousel-item" data-index="3" data-status="previous"
+            data-trailer-color="orange,blue">
             <h1>Projetos</h1>
             <div id="projects-container">
                 <div class="project" id="project-1">
@@ -121,10 +125,10 @@
             </div>
         </section>
     </div>
-    <button class="right-nav-btn nav-btn" onclick="rightButtonClick()">
+    <button class="right-nav-btn nav-btn" onclick="rightButtonClick(); mouseColorPlus()">
         <i class="fa-solid fa-chevron-right  "></i>
     </button>
-    <button class="left-nav-btn nav-btn" onclick="leftButtonClick()">
+    <button class="left-nav-btn nav-btn" onclick="leftButtonClick(); mouseColorMinus()">
         <i class="fa-solid fa-chevron-left  "></i>
     </button>
     <script src="scripts/carousel.js"></script>
