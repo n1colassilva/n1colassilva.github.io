@@ -24,7 +24,7 @@ window.onpointermove = (event) => {
 
 let rootStyle = document.documentElement.style;
 
-const mouseColorPlus = () => {
+const mouseColorUpdate = () => {
 	const activeZone = document.querySelector(`[data-status="current"]`);
 
 	const trailerColors = activeZone.dataset.trailerColor.split(",");
@@ -69,7 +69,7 @@ const mouseColorPlus = () => {
 	}, 1000);
 };
 
-mouseColorPlus(); // calling function for first time setup
+mouseColorUpdate(); // calling function for first time setup
 
 //i spent 3 days on this, shoutout to christ for the holiday
 //update: 3 to think how to do it, a further 3 to fix ;-;

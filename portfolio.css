@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
-	--dark: #121212;
+	/* --dark: #121212;
 	--half-dark: #373737;
 	--least-dark: #5b5b5b;
 	--grey: #ddd;
@@ -16,7 +16,16 @@
 	--background-googleish-yellow: #fbbc05;
 	--background-googleish-blue: #4285f4;
 	--background-googleish-green: #34a853;
-	--background-googleish-red: #ea4335;
+	--background-googleish-red: #ea4335; */
+
+	--background: #1c1b1f;
+	--surface-0: #313033;
+	--surface-1: #484649;
+
+	--outline: #938f99;
+
+	--primary: #381e72;
+	--primary-container: #4f378b;
 }
 
 * {
@@ -26,8 +35,8 @@
 }
 
 body {
-	background-color: #121212;
-	color: #ffffff;
+	background-color: black;
+	color: white;
 	overflow: hidden;
 	width: 100%;
 }
@@ -211,8 +220,9 @@ button {
 	box-sizing: border-box;
 	width: 80%;
 	padding: 3rem 3rem;
-	background-color: #373737cf;
+	background-color: var(--surface-0);
 	backdrop-filter: blur(10px);
+	opacity: 0.9;
 	border-radius: 10px;
 }
 
@@ -225,8 +235,15 @@ button {
 	width: 100%;
 	margin: 1.25rem 0;
 	padding: 10px;
-	background-color: var(--dark);
-	border-radius: 10px;
+	background-color: var(--surface-1);
+	opacity: 1;
+	border-radius: 5px;
+}
+
+.academic-card-titles {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 }
 
 .academic-card > h1 {

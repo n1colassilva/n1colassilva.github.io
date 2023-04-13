@@ -35,16 +35,20 @@
             <h2>Onde aprendi o que sei</h2>
             <div id="academic-bg-wrapper">
                 <div class="academic-card">
-                    <h1>UFU</h1> <!-- TODO: make acronyms slide to reveal meaning-->
-                    <h2>Bacharelado: Sistemas de Informação</h2>
-                    <p class="academic-card-dates">Início: <time datetime="2023">2023</time></p>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div class="academic-card-titles">
+                        <h1>UFU</h1>
+                        <h2>Sistemas de Informação - Bacharelado</h2>
+                        <p>2023 - Ainda cursando</p>
+                    </div>
                 </div>
                 <div class="academic-card">
-                    <h1>IFTM</h1> <!-- TODO: make acronyms slide to reveal meaning-->
-                    <h2>Tecnólogo: Informática</h2>
-                    <p class="academic-card-dates">Início: <time datetime="2019">2019</time>Término: <time
-                            datetime="2022">2022</time>
-                    </p>
+                    <i>ICON</i>
+                    <div class="academic-card-titles">
+                        <h1>IFTM</h1>
+                        <h2>Manutenção e Suporte em Informática - Técnico</h2>
+                        <p>Jan 2019 - Fev 2022</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,10 +130,10 @@
             </div>
         </section>
     </div>
-    <button class="right-nav-btn nav-btn" onclick="rightButtonClick(); mouseColorPlus()">
+    <button class="right-nav-btn nav-btn" onclick="rightButtonClick(); mouseColorUpdate()">
         <i class="fa-solid fa-chevron-right  "></i>
     </button>
-    <button class="left-nav-btn nav-btn" onclick="leftButtonClick(); mouseColorMinus()">
+    <button class="left-nav-btn nav-btn" onclick="leftButtonClick(); mouseColorUpdate()">
         <i class="fa-solid fa-chevron-left  "></i>
     </button>
     <script src="scripts/carousel.js"></script>
