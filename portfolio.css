@@ -50,17 +50,15 @@ body {
 	top: 50%;
 	translate: -50% -50%;
 	border-radius: 50%;
-	/* background: linear-gradient(to right, var(--purple), rgb(0, 255, 170)); */
 	background: linear-gradient(to right, var(--trailer-color-1), var(--trailer-color-2));
 	transition: var(--trailer-transition-secs);
 	opacity: var(--trailer-opacity);
 }
 
 #mouse-trailer-trans {
-	content: "";
 	background: linear-gradient(to right, var(--trailer-color-old-1), var(--trailer-color-old-2));
 	aspect-ratio: 1;
-	height: 40vmax;
+	height: 30vmax;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -74,7 +72,7 @@ body {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	backdrop-filter: blur(20vmax);
+	backdrop-filter: blur(40vmax);
 }
 
 #info-carousel {
@@ -135,7 +133,6 @@ body {
 	position: absolute;
 	transform: scale(0);
 	transition: 0s;
-	/* visibility: hidden; */
 }
 
 .right-nav-btn {
@@ -158,7 +155,6 @@ body {
 	font-size: 3rem;
 	color: #fff;
 	background-color: #12121200;
-	/* height: 100%; */
 	width: 5%;
 }
 
@@ -202,15 +198,12 @@ button {
 
 #academic > h1 {
 	font-size: 3rem;
-	margin: 1.5rem 0 1rem 0;
+	margin: 3.5rem 0;
 }
 
-#academic > h2 {
-	font-size: 1.5rem;
-	margin: 0.75rem 0 1.75rem 0;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 25px;
+.academic-icon {
+	font-size: 3rem;
+	padding: 2rem;
 }
 
 #academic-bg-wrapper {
@@ -219,10 +212,9 @@ button {
 	align-items: flex-start;
 	box-sizing: border-box;
 	width: 80%;
-	padding: 3rem 3rem;
+	padding: 2rem 2rem;
 	background-color: var(--surface-0);
 	backdrop-filter: blur(10px);
-	opacity: 0.9;
 	border-radius: 10px;
 }
 
@@ -230,13 +222,12 @@ button {
 	display: flex;
 	flex-flow: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 	box-sizing: border-box;
 	width: 100%;
-	margin: 1.25rem 0;
+	margin: 1rem 0;
 	padding: 10px;
 	background-color: var(--surface-1);
-	opacity: 1;
 	border-radius: 5px;
 }
 
@@ -246,15 +237,17 @@ button {
 	text-align: left;
 }
 
-.academic-card > h1 {
-	font-size: 1.5rem;
+.academic-card-titles > h1 {
+	font-size: 2rem;
+	/* margin: 1.5rem 0 1rem 0; */
 }
 
-.academic-card > h2 {
-	box-sizing: border-box;
-	padding: 1rem 0;
-	font-size: 1.5rem;
-	font-style: bold;
+.academic-card-titles > h2 {
+	font-size: 0.75rem;
+	/* margin: 0.75rem 0 1.75rem 0; */
+	font-weight: 400;
+	font-style: normal;
+	font-size: 25px;
 }
 
 .academic-card-description {

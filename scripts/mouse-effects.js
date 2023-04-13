@@ -40,7 +40,7 @@ const mouseColorUpdate = () => {
 
 	rootStyle.setProperty("--trailer-transition-secs", "1s");
 
-	rootStyle.setProperty("--trailer-opacity", 1); // set the current gradient to full opacity
+	rootStyle.setProperty("--trailer-opacity", 0.7); // set the current gradient to full opacity
 	rootStyle.setProperty("--trailer-before-opacity", 0); // before pseudoelem to no opacity
 
 	rootStyle.setProperty("--trailer-color-1", trailerColorOld1); // current keeps its colors
@@ -52,7 +52,7 @@ const mouseColorUpdate = () => {
 	console.log("singing");
 
 	rootStyle.setProperty("--trailer-opacity", 0); // current to 0
-	rootStyle.setProperty("--trailer-trans-opacity", 1); // before's opacity is set to 1
+	rootStyle.setProperty("--trailer-trans-opacity", 0.7); // before's opacity is set to 1
 	console.log("dancing");
 	// before now visible, current is not
 
@@ -62,7 +62,7 @@ const mouseColorUpdate = () => {
 		rootStyle.setProperty("--trailer-color-1", trailerColor1); // give current the new colors
 		rootStyle.setProperty("--trailer-color-2", trailerColor2);
 
-		rootStyle.setProperty("--trailer-opacity", 1); // real one is visible
+		rootStyle.setProperty("--trailer-opacity", 0.7); // real one is visible
 		rootStyle.setProperty("--trailer-trans-opacity", 0); // before opacity to 0
 
 		console.log("rearranging furniture");
