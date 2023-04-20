@@ -397,8 +397,7 @@ button {
 } */
 
 .project:hover {
-	max-height: 25rem;
-	height: 25rem;
+	height: 20rem;
 }
 
 .project-text {
