@@ -292,8 +292,8 @@ button {
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 0;
-	width: 75%;
+	gap: 20px;
+	width: 80%;
 	margin-bottom: 5rem;
 }
 
@@ -306,9 +306,10 @@ button {
 	/* border: 1px solid #FFF; */
 	height: 50vh;
 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	border-radius: 7px;
+	border-color: #acacac;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .professional-block-text-container {
@@ -331,22 +332,6 @@ button {
 
 #professional-block-2 {
 	background: url(images/experience/paratudo-bebidas.jpg);
-
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#professional-block-3 {
-	background: url(https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
-
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#professional-block-4 {
-	background: url(https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80);
 
 	background-position: center;
 	background-repeat: no-repeat;
@@ -417,6 +402,24 @@ button {
 	align-items: center;
 }
 
+.project-text > h2 {
+	margin-bottom: 3rem;
+	font-weight: normal;
+}
+
+.project-text > p {
+	margin-bottom: 2rem;
+	text-indent: 1rem;
+}
+
+.project-text > ul {
+	margin-bottom: 2rem;
+}
+
+.project-text > ul > li {
+	margin-bottom: 1rem;
+}
+
 #project-1 {
 	background-position: center;
 	background-repeat: no-repeat;
@@ -433,6 +436,10 @@ button {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#project-2:hover {
+	height: 29em;
 }
 
 #project-3 {
@@ -453,4 +460,8 @@ button {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#project-4:hover {
+	height: 35em;
 }
