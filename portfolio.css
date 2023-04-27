@@ -98,14 +98,14 @@ a:active {
 	height: 100vh;
 	width: 100vw;
 	text-align: center;
-	transition: 1s;
+	transition: 1s cubic-bezier(0.38, 0, 0.3, 1.23);
 }
 
 .info-carousel-item[data-status="current"] {
 	position: absolute;
 	height: 100%;
 	visibility: visible;
-	transition: 1s;
+	transition: 1s cubic-bezier(0.38, 0, 0.3, 1.23);
 	transform: translateX(0%);
 }
 
@@ -171,9 +171,15 @@ button {
 	border: none;
 }
 
+#landing-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
 #landing-page > h1 {
 	font-size: 50px;
-	margin: 100px 0px 50px 0px;
+	/* margin: 0px 0px 50px 0px; */
 	font-weight: 500;
 }
 
@@ -190,13 +196,14 @@ button {
 }
 
 #description {
-	margin: 20px;
+	/* margin: 20px; */
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 #academic {
 	box-sizing: border-box;
+
 	overflow: scroll;
 	/* Hide scrollbar for IE, Edge and Firefox */
 	-ms-overflow-style: none;
@@ -210,9 +217,13 @@ button {
 	margin: 3.5rem 0;
 }
 
-.academic-icon {
-	font-size: 3rem;
-	padding: 2rem;
+#academic-content-wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 75%;
 }
 
 #academic-bg-wrapper {
@@ -238,6 +249,11 @@ button {
 	padding: 10px;
 	background-color: var(--surface-1);
 	border-radius: 5px;
+}
+
+.academic-icon {
+	font-size: 3rem;
+	padding: 2rem;
 }
 
 .academic-card-titles {
