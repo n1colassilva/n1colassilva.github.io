@@ -36,7 +36,7 @@ a:active {
 #mouse-trailer {
 	background-color: white;
 	height: 30vmax;
-	aspect-ratio: 1;
+	aspect-ratio: 1/1;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -49,7 +49,7 @@ a:active {
 
 #mouse-trailer-trans {
 	background: linear-gradient(to right, var(--trailer-color-old-1), var(--trailer-color-old-2));
-	aspect-ratio: 1;
+	aspect-ratio: 1/1;
 	height: 30vmax;
 	position: absolute;
 	left: 50%;
