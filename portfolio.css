@@ -1,23 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 :root {
-	/* --dark: #121212;
-	--half-dark: #373737;
-	--least-dark: #5b5b5b;
-	--grey: #ddd;
-	--purple: #7600e6;
-	--light-purple: #901aff;
-	--dark-purple: #420080;
-	--red: #ff4d4d;
-	--redder: #ff0000;
-	--red-light: #ff5f5f;
-	--blue: #4173ad;
-
-	--background-googleish-yellow: #fbbc05;
-	--background-googleish-blue: #4285f4;
-	--background-googleish-green: #34a853;
-	--background-googleish-red: #ea4335; */
-
 	--background: #1c1b1f;
 	--surface-0: #313033;
 	--surface-1: #484649;
@@ -94,7 +77,6 @@ a:active {
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-	/* justify-content: center; */
 	height: 100vh;
 	width: 100vw;
 	text-align: center;
@@ -179,7 +161,6 @@ button {
 
 #landing-page > h1 {
 	font-size: 50px;
-	/* margin: 0px 0px 50px 0px; */
 	font-weight: 500;
 }
 
@@ -319,7 +300,6 @@ button {
 }
 
 .professional-block {
-	/* border: 1px solid #FFF; */
 	height: 50vh;
 
 	border-radius: 7px;
@@ -447,8 +427,6 @@ button {
 }
 
 #project-2 {
-	/* background: url(https://w0.peakpx.com/wallpaper/792/175/HD-wallpaper-fantasy-wizard-book-candle-magic-man-skull-%E2%80%A2-for-you-cool-wizard.jpg); */
-
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -459,8 +437,6 @@ button {
 }
 
 #project-3 {
-	/* background: url(https://i1.sndcdn.com/artworks-3dJXgPZbnHqvOCzQ-iZq4qg-t500x500.jpg); */
-
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -471,8 +447,6 @@ button {
 }
 
 #project-4 {
-	/* background: url(https://static.tvtropes.org/pmwiki/pub/images/bc2.jpg); */
-
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
