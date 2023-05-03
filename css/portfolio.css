@@ -319,7 +319,7 @@ button {
 }
 
 #professional-block-1 {
-	background: url(images/experience/SunSaleSystem.png);
+	background: url(/images/experience/SunSaleSystem.png);
 
 	background-position: center;
 	background-repeat: no-repeat;
@@ -327,7 +327,7 @@ button {
 }
 
 #professional-block-2 {
-	background: url(images/experience/paratudo-bebidas.jpg);
+	background: url(/images/experience/paratudo-bebidas.jpg);
 
 	background-position: center;
 	background-repeat: no-repeat;
