@@ -126,27 +126,48 @@ a:active {
 	transition: 0s;
 }
 
-.right-nav-btn {
-	position: absolute;
-	right: 0%;
-	top: 50%;
-}
-
-.left-nav-btn {
-	position: absolute;
-	left: 0%;
-	top: 50%;
+.carousel-title {
+	font-size: 3rem;
+	margin: 3.5rem 0;
 }
 
 .nav-btn {
 	display: flex;
+	/* 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+
+	width: 3rem;
+	font-size: 3rem;
+	color: #fff;
+	background-color: #00000000;
+
+	padding: 0em;
+}
+
+.nav-btn-wrapper {
+	height: 100%;
+	box-sizing: content-box;
+
+	display: flex;
+
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 3rem;
-	color: #fff;
-	background-color: #12121200;
-	width: 5%;
+
+	width: 100%;
+}
+
+#nav-btns {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
 }
 
 button {
@@ -192,11 +213,6 @@ button {
 	/* IE and Edge */
 	scrollbar-width: none;
 	/* Firefox */
-}
-
-#academic > h1 {
-	font-size: 3rem;
-	margin: 3.5rem 0;
 }
 
 #academic-content-wrapper {
@@ -295,11 +311,6 @@ button {
 	margin-bottom: 5rem;
 }
 
-#professional > h1 {
-	font-size: 3rem;
-	margin: 3.5rem 0;
-}
-
 .professional-block {
 	height: 50vh;
 
@@ -349,11 +360,6 @@ button {
 	display: none;
 }
 
-#projects > h1 {
-	font-size: 3rem;
-	margin: 3.5rem 0;
-}
-
 #projects-container {
 	display: flex;
 	padding: 1.5rem;
@@ -394,9 +400,10 @@ button {
 	flex-direction: row;
 	justify-content: space-between;
 	margin-bottom: 3rem;
-	font-size: 2em;
+	font-size: 1.5em;
 	color: white;
 	align-items: center;
+	justify-items: center;
 }
 
 .project-text > h2 {
@@ -444,7 +451,7 @@ button {
 }
 
 #project-3:hover {
-	height: 30em;
+	height: 35em;
 }
 
 #project-4 {

@@ -35,7 +35,7 @@
 
 		<section id="academic" class="info-carousel-item" data-index="1" data-status="next"
 			data-trailer-color="white,cornflowerblue">
-			<h1> Acadêmico </h1>
+			<h1 class="carousel-title"> Academic </h1>
 			<div id="academic-content-wrapper">
 				<div id="academic-bg-wrapper">
 					<div class="academic-card">
@@ -61,7 +61,7 @@
 		<section id="professional" class="info-carousel-item" data-index="2" data-status="unknown"
 			data-trailer-color="blue,purple">
 
-			<h1>Experience</h1>
+			<h1 class="carousel-title">Experience</h1>
 
 			<div id="professional-block-container">
 				<article class="professional-block" id="professional-block-1">
@@ -81,7 +81,7 @@
 
 		<section id="projects" class="info-carousel-item" data-index="3" data-status="previous"
 			data-trailer-color="orange,blue">
-			<h1>Projects</h1>
+			<h1 class="carousel-title">Projects</h1>
 
 			<div id="projects-container">
 
@@ -175,11 +175,22 @@
 			</div>
 		</section>
 	</div>
-	<button class="right-nav-btn nav-btn fa-solid fa-chevron-right" onclick="rightButtonClick(); mouseColorUpdate()">
-	</button>
-	<button class="left-nav-btn nav-btn fa-solid fa-chevron-left" onclick="leftButtonClick(); mouseColorUpdate()">
-	</button>
 
+	<div id="nav-btns">
+		<div id="right-nav-btn-wrapper">
+			<div class="nav-btn-wrapper">
+				<button class="nav-btn fa-solid fa-chevron-right" onclick="rightButtonClick(); mouseColorUpdate()">
+				</button>
+			</div>
+		</div>
+
+		<div id="left-nav-btn-wrapper">
+			<div class="nav-btn-wrapper">
+				<button class="nav-btn fa-solid fa-chevron-left" onclick="leftButtonClick(); mouseColorUpdate()">
+				</button>
+			</div>
+		</div>
+	</div>
 	<script src="../../../javascript/carousel.js"></script>
 	<script src="../../../javascript/text-effects.js"></script>
 	<script src="../../../javascript/mouse-effects.js"></script>
