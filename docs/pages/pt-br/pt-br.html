@@ -170,10 +170,21 @@
 			</div>
 		</section>
 	</div>
-	<button class="right-nav-btn nav-btn fa-solid fa-chevron-right" onclick="rightButtonClick(); mouseColorUpdate()">
-	</button>
-	<button class="left-nav-btn nav-btn fa-solid fa-chevron-left" onclick="leftButtonClick(); mouseColorUpdate()">
-	</button>
+	<div id="nav-btns">
+		<div id="right-nav-btn-wrapper">
+			<div class="nav-btn-wrapper">
+				<button class="nav-btn fa-solid fa-chevron-right" onclick="rightButtonClick(); mouseColorUpdate()">
+				</button>
+			</div>
+		</div>
+
+		<div id="left-nav-btn-wrapper">
+			<div class="nav-btn-wrapper">
+				<button class="nav-btn fa-solid fa-chevron-left" onclick="leftButtonClick(); mouseColorUpdate()">
+				</button>
+			</div>
+		</div>
+	</div>
 
 	<script src="../../../javascript/carousel.js"></script>
 	<script src="../../../javascript/text-effects.js"></script>
