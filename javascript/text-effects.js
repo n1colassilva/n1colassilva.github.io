@@ -1,11 +1,11 @@
 const landingPageFella = document.getElementById("waving-arms");
 
 setInterval(() => {
-    setTimeout(() => {
-        landingPageFella.innerHTML = "|(^︶^)";
-    }, 150);
+	setTimeout(() => {
+		landingPageFella.innerHTML = "| (• ᗜ •)";
+	}, 125);
 
-    setTimeout(() => {
-        landingPageFella.innerHTML = "\\(^︶^)";
-    }, 300);
-}, 300);
+	setTimeout(() => {
+		landingPageFella.innerHTML = "\\ (• ᗜ •)";
+	}, 250);
+}, 250);
