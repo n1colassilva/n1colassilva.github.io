@@ -80,14 +80,14 @@ a:active {
 	height: 100vh;
 	width: 100vw;
 	text-align: center;
-	transition: 1s cubic-bezier(0.38, 0, 0.3, 1.23);
+	transition: 1s ease;
 }
 
 .info-carousel-item[data-status="current"] {
 	position: absolute;
 	height: 100%;
 	visibility: visible;
-	transition: 1s cubic-bezier(0.38, 0, 0.3, 1.23);
+	transition: 1s ease;
 	transform: translateX(0%);
 }
 
