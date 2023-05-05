@@ -1,9 +1,9 @@
 const userLang = navigator.language || navigator.userLanguage;
 
 if (userLang.startsWith("en")) {
-	window.location.href = "/pages/en/en.html";
+	window.location.href = "/en";
 } else if (userLang.startsWith("pt")) {
-	window.location.href = "/pages/pt-br/pt-br.html";
+	window.location.href = "/pt-br";
 } else {
-	window.location.href = "/pages/en/en.html";
+	window.location.href = "/en";
 }
