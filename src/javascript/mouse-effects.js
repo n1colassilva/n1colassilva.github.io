@@ -49,11 +49,11 @@ const mouseColorUpdate = () => {
 	rootStyle.setProperty("--trailer-color-old-1", trailerColor1); // before gets the new ones
 	rootStyle.setProperty("--trailer-color-old-2", trailerColor2);
 
-	console.log("singing");
+	// console.log("singing");
 
 	rootStyle.setProperty("--trailer-opacity", 0); // current to 0
 	rootStyle.setProperty("--trailer-trans-opacity", 0.7); // before's opacity is set to 1
-	console.log("dancing");
+	// console.log("dancing");
 	// before now visible, current is not
 
 	setTimeout(() => {
@@ -65,7 +65,7 @@ const mouseColorUpdate = () => {
 		rootStyle.setProperty("--trailer-opacity", 0.7); // real one is visible
 		rootStyle.setProperty("--trailer-trans-opacity", 0); // before opacity to 0
 
-		console.log("rearranging furniture");
+		// console.log("rearranging furniture");
 	}, 1000);
 };
 
