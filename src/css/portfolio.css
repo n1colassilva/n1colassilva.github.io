@@ -131,35 +131,10 @@ a:active {
 	margin: 3.5rem 0;
 }
 
-@keyframes nav-click-right {
-	0% {
-		transform: rotate(0);
-	}
-	70% {
-		transform: rotate(360deg) translateX(10px);
-	}
-	100% {
-		transform: rotate(360deg) translateX(0);
-	}
-}
-
-#right-nav-btn-wrapper > div > button:active {
-	animation-name: nav-click-right;
-	animation-duration: 1s;
-	animation-timing-function: ease-in-out;
-	animation-fill-mode: backwards;
-}
-
-#right-nav-btn-wrapper > div > button {
-	animation-duration: 1s;
-}
-
 .nav-btn {
-	display: flex;
-	/* 
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; */
+	position: absolute;
+	transform: translate(0%, -100%);
+	top: 50%;
 
 	width: 3rem;
 	font-size: 3rem;
@@ -169,28 +144,12 @@ a:active {
 	padding: 0em;
 }
 
-.nav-btn-wrapper {
-	height: 100%;
-	box-sizing: content-box;
-
-	display: flex;
-
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	width: 100%;
+#nav-right {
+	right: 2.5%;
 }
 
-#nav-btns {
-	position: absolute;
-	top: 0%;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
-	align-items: center;
+#nav-left {
+	left: 2.5%;
 }
 
 button {
