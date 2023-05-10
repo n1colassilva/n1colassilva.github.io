@@ -1,198 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Nícolas</title>
+		<link
+			rel="stylesheet"
+			href="/src/css/portfolio.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+			integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link
+			rel="shortcut icon"
+			href="/src/favicon_io/favicon.ico"
+			type="image/x-icon" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/src/favicon_io/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/src/favicon_io/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/src/favicon_io/favicon-16x16.png" />
+		<link
+			rel="manifest"
+			href="/src/favicon_io/site.webmanifest" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nícolas</title>
-	<link rel="stylesheet" href="/src/css/portfolio.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
-		integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="shortcut icon" href="/src/favicon_io/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" sizes="180x180" href="/src/favicon_io/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/src/favicon_io/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/src/favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="/src/favicon_io/site.webmanifest">
+	<body>
+		<div id="mouse-trailer"></div>
+		<div id="mouse-trailer-trans"></div>
+		<div id="mouse-blur"></div>
+		<main id="info-carousel">
+			<section
+				id="landing-page"
+				class="info-carousel-item"
+				data-index="0"
+				data-status="current"
+				data-trailer-color="magenta,white">
+				<h1
+					id="typeout"
+					data-text="Nícolas">
+					Nícolas
+				</h1>
+				<h2>Developer</h2>
+				<div id="description">
+					<p>Hello, this is my website! Learn more about me through some pseudo-slides</p>
+					<span id="waving-arms">│(^︶^)</span>
+				</div>
+			</section>
 
-<body>
-	<div id="mouse-trailer"></div>
-	<div id="mouse-trailer-trans"></div>
-	<div id="mouse-blur"></div>
-	<main id="info-carousel">
-		<section id="landing-page" class="info-carousel-item" data-index="0" data-status="current"
-			data-trailer-color="magenta,white">
-			<h1 id="typeout" data-text="Nícolas">Nícolas</h1>
-			<h2>Developer</h2>
-			<div id="description">
-				<p>
-					Hello, this is my website! Learn more about me through some pseudo-slides
-				</p>
-				<span id="waving-arms">│(^︶^)</span>
-			</div>
-		</section>
-
-		<section id="academic" class="info-carousel-item" data-index="1" data-status="next"
-			data-trailer-color="white,cornflowerblue">
-			<h1 class="carousel-title"> Academic </h1>
-			<div id="academic-content-wrapper">
-				<div id="academic-bg-wrapper">
-					<div class="academic-card">
-						<i class="fa-solid fa-code academic-icon"></i>
-						<div class="academic-card-titles">
-							<h1>UFU</h1>
-							<h2>Information Systems - Bachelor</h2>
-							<p>2023 - Currently enrolled</p>
+			<section
+				id="academic"
+				class="info-carousel-item"
+				data-index="1"
+				data-status="next"
+				data-trailer-color="white,cornflowerblue">
+				<h1 class="carousel-title">Academic</h1>
+				<div id="academic-content-wrapper">
+					<div id="academic-bg-wrapper">
+						<div class="academic-card">
+							<i class="fa-solid fa-code academic-icon"></i>
+							<div class="academic-card-titles">
+								<h1>UFU</h1>
+								<h2>Information Systems - Bachelor</h2>
+								<p>2023 - Currently enrolled</p>
+							</div>
+						</div>
+						<div class="academic-card">
+							<i class="fa-solid fa-screwdriver-wrench academic-icon"></i>
+							<div class="academic-card-titles">
+								<h1>IFTM</h1>
+								<h2>IT Maintenance and Support- Technical</h2>
+								<p>Jan 2019 - Feb 2022</p>
+							</div>
 						</div>
 					</div>
-					<div class="academic-card">
-						<i class="fa-solid fa-screwdriver-wrench academic-icon"></i>
-						<div class="academic-card-titles">
-							<h1>IFTM</h1>
-							<h2>IT Maintenance and Support- Technical</h2>
-							<p>Jan 2019 - Feb 2022</p>
+				</div>
+			</section>
+
+			<section
+				id="professional"
+				class="info-carousel-item"
+				data-index="2"
+				data-status="unknown"
+				data-trailer-color="blue,purple">
+				<h1 class="carousel-title">Experience</h1>
+
+				<div id="professional-block-container">
+					<article
+						class="professional-block"
+						id="professional-block-1">
+						<div class="professional-block-text-container">
+							<h2>SunSale System - Internship</h2>
+							<p>Front-end development</p>
 						</div>
+					</article>
+					<article
+						class="professional-block"
+						id="professional-block-2">
+						<div class="professional-block-text-container">
+							<h2>Paratudo Bebidas - Apprentice</h2>
+							<p>IT Support</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section
+				id="projects"
+				class="info-carousel-item"
+				data-index="3"
+				data-status="previous"
+				data-trailer-color="orange,blue">
+				<h1 class="carousel-title">Projects</h1>
+
+				<div id="projects-container">
+					<div
+						class="project"
+						id="project-1">
+						<article class="project-text">
+							<div class="project-header">
+								<h2>This website!</h2>
+								<a
+									class="fa-solid fa-link"
+									href=""></a>
+							</div>
+							<p>
+								I created this website with the intent to learn new things and show off, this was written every day for the few free hours i had
+								along a few months. I have included various visual effects i learned to create.
+							</p>
+						</article>
+					</div>
+					<div
+						class="project"
+						id="project-2">
+						<article class="project-text">
+							<div class="project-header">
+								<h2>To-Do list</h2>
+								<a
+									class="fa-solid fa-link"
+									href="https://n1colassilva.github.io/yet-another-to-do-app/"></a>
+							</div>
+							<p>The most overdone type of project, does what is expected:</p>
+							<ul>
+								<li>Write new reminders!</li>
+								<li>Delete the reminders!!</li>
+								<li>Believe it or not, dear reader, you can even edit them!!!/li></li>
+							</ul>
+
+							<p>Definetly a huge breakthrough in web design</p>
+							<p>
+								On a less cynical note, something i started doing in this project was using css variables to keep a consistent visual identity
+								on the project, plus it kept me from adding a comically large amount of different colors and made avoiding choice paralysis
+								easier.
+							</p>
+						</article>
+					</div>
+					<div
+						class="project"
+						id="project-3">
+						<article class="project-text">
+							<div class="project-header">
+								<h2>APIs</h2>
+								<a
+									class="fa-solid fa-link"
+									href="https://n1colassilva.github.io/api-site/"></a>
+							</div>
+							<h2>Website of questionable usefullness that utilizes various web APIs</h2>
+							<p>None use private API keys, i wanted to avoid unforeseen consequences.</p>
+							<ul>
+								<li>The 1st one send mostly programming themed jokes.</li>
+								<li>The 2nd shows useless facts, at least they are interesting so was time really wasted?</li>
+								<li>the 3rd one shows life advice, sadly its very limited in calls, so it doesn't allow you to see many in a hasty manner.</li>
+							</ul>
+							<p>
+								This project was my first forée into emplying APIs in my projects, yes technically these are not the only type of APIs, but for
+								simplification this is what i have reffered to them as.<br />
+								This was a good learning experience as to be brutally honest using these things sounds very complicated.
+							</p>
+						</article>
+					</div>
+					<div
+						class="project"
+						id="project-4">
+						<article class="project-text">
+							<div class="project-header">
+								<h2>CitiesBot</h2>
+								<a
+									class="fa-solid fa-link"
+									href="https://github.com/n1colassilva/CitiesBot"></a>
+							</div>
+							<h2>CitiesBot is a script i created for automating the mundane tasks of a game i enjoy called "Cities War".</h2>
+							<p>
+								It's a script written in python that uses selenium to automate clicking, waiting for an element to pop up and calculating what
+								to sell and how much
+							</p>
+							<p>
+								As my first python project it is quite rough, it was was planned to be a command line tool, but making that sounded too
+								complicated, so i decided on making it just a script that requires a configuration file to be set up.
+							</p>
+							<p>
+								Sadly due to the nature of the game's updates the script is both hard an easy to update, hard because every. single. update.
+								requires a remapping of where the elements are located, something will usually break no matter what.
+							</p>
+							<p>
+								Though in my great wisdom i saw that happening and tried to keep everything simple to update and well documented so any
+								maintainer can just locate and update the positions.
+							</p>
+						</article>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
-		<section id="professional" class="info-carousel-item" data-index="2" data-status="unknown"
-			data-trailer-color="blue,purple">
+		<button
+			id="nav-right"
+			class="nav-btn fa-solid fa-chevron-right"
+			onclick="rightButtonClick(); mouseColorUpdate()"></button>
 
-			<h1 class="carousel-title">Experience</h1>
+		<button
+			id="nav-left"
+			class="nav-btn fa-solid fa-chevron-left"
+			onclick="leftButtonClick(); mouseColorUpdate()"></button>
 
-			<div id="professional-block-container">
-				<article class="professional-block" id="professional-block-1">
-					<div class="professional-block-text-container">
-						<h2>SunSale System - Internship</h2>
-						<p>Front-end development</p>
-					</div>
-				</article>
-				<article class="professional-block" id="professional-block-2">
-					<div class="professional-block-text-container">
-						<h2>Paratudo Bebidas - Apprentice</h2>
-						<p>IT Support</p>
-					</div>
-				</article>
-			</div>
-		</section>
-
-		<section id="projects" class="info-carousel-item" data-index="3" data-status="previous"
-			data-trailer-color="orange,blue">
-			<h1 class="carousel-title">Projects</h1>
-
-			<div id="projects-container">
-
-				<div class="project" id="project-1">
-					<article class="project-text">
-						<div class="project-header">
-							<h2>This website!</h2>
-							<a class="fa-solid fa-link" href=""></a>
-						</div>
-						<p>
-							I created this website with the intent to learn new things and show off, this was written
-							every day for the few free hours i had along a few months. I have included various visual
-							effects i learned to create.
-						</p>
-					</article>
-				</div>
-				<div class="project" id="project-2">
-					<article class="project-text">
-						<div class="project-header">
-							<h2>To-Do list</h2>
-							<a class="fa-solid fa-link"
-								href="https://n1colassilva.github.io/yet-another-to-do-app/"></a>
-						</div>
-						<p>
-							The most overdone type of project, does what is expected:
-						</p>
-						<ul>
-							<li>Write new reminders!</li>
-							<li>Delete the reminders!!</li>
-							<li>Believe it or not, dear reader, you can even edit them!!!/li>
-						</ul>
-						<p>Definetly a huge breakthrough in web design</p>
-						<p>
-							On a less cynical note, something i started doing in this project was using css variables to
-							keep a consistent visual identity on the project, plus it kept me from adding a comically
-							large amount of different colors and made avoiding choice paralysis easier.
-						</p>
-					</article>
-				</div>
-				<div class="project" id="project-3">
-					<article class="project-text">
-						<div class="project-header">
-							<h2>APIs</h2>
-							<a class="fa-solid fa-link" href="https://n1colassilva.github.io/api-site/"></a>
-						</div>
-						<h2>Website of questionable usefullness that utilizes various web APIs</h2>
-						<p>None use private API keys, i wanted to avoid unforeseen consequences.</p>
-						<ul>
-							<li>The 1st one send mostly programming themed jokes.</li>
-							<li>The 2nd shows useless facts, at least they are interesting so was time really wasted?
-							</li>
-							<li>the 3rd one shows life advice, sadly its very limited in calls, so it doesn't allow you
-								to see many in a hasty manner.</li>
-						</ul>
-						<p>This project was my first forée into emplying APIs in my projects, yes technically these are
-							not the only type of APIs, but for simplification this is what i have reffered to them
-							as.<br> This was a good learning experience as to be brutally honest using these things
-							sounds very complicated.</p>
-					</article>
-				</div>
-				<div class="project" id="project-4">
-					<article class="project-text">
-						<div class="project-header">
-							<h2>CitiesBot</h2>
-							<a class="fa-solid fa-link" href="https://github.com/n1colassilva/CitiesBot"></a>
-						</div>
-						<h2>CitiesBot is a script i created for automating the mundane tasks of a game i enjoy called
-							"Cities
-							War".</h2>
-						<p>
-							It's a script written in python that uses selenium to automate clicking, waiting for an
-							element to pop up and calculating what to sell and how much
-						</p>
-						<p>
-							As my first python project it is quite rough, it was was planned to be a command line tool,
-							but making that sounded too complicated, so i decided on making it just a script that
-							requires a configuration file to be set up.
-						</p>
-						<p>
-							Sadly due to the nature of the game's updates the script is both hard an easy to update,
-							hard because every. single. update. requires a remapping of where the elements are located,
-							something will usually break no matter what.
-						</p>
-						<p>
-							Though in my great wisdom i saw that happening and tried to keep everything simple to update
-							and well documented so any maintainer can just locate and update the positions.
-						</p>
-					</article>
-				</div>
-
-			</div>
-		</section>
-	</main>
-
-	<div id="nav-btns">
-		<div id="right-nav-btn-wrapper">
-			<div class="nav-btn-wrapper">
-				<button class="nav-btn fa-solid fa-chevron-right" onclick="rightButtonClick(); mouseColorUpdate()">
-				</button>
-			</div>
-		</div>
-		<div id="left-nav-btn-wrapper">
-			<div class="nav-btn-wrapper">
-				<button class="nav-btn fa-solid fa-chevron-left" onclick="leftButtonClick(); mouseColorUpdate()">
-				</button>
-			</div>
-		</div>
-	</div>
-	<script src="/src/javascript/carousel.js"></script>
-	<script src="/src/javascript/text-effects.js"></script>
-	<script src="/src/javascript/mouse-effects.js"></script>
-</body>
-
+		<script src="/src/javascript/carousel.js"></script>
+		<script src="/src/javascript/text-effects.js"></script>
+		<script src="/src/javascript/mouse-effects.js"></script>
+	</body>
 </html>
