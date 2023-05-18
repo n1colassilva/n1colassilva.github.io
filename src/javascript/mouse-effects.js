@@ -71,5 +71,4 @@ const mouseColorUpdate = () => {
 
 mouseColorUpdate(); // calling function for first time setup
 
-//i spent 3 days on this, shoutout to christ for the holiday
-//update: 3 to think how to do it, a further 3 to fix ;-;
+//i spent 3 days on this, shoutout to christ for the holidayte: 3 to think how to do it, a further 3 to fix ;-;

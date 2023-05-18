@@ -42,8 +42,9 @@ const rightButtonClick = () => {
 
 	// Update the current index variable
 	carouselIndex = nextIndexNumber;
-};
 
+	textLoadSectionTrigger(nextIndex); // Sets off textLoad effect in any child of "current" section
+};
 // similar  code as rightButtonClick, but change the status because we are going back
 // and want it to always come from the correct direction
 const leftButtonClick = () => {
@@ -54,7 +55,8 @@ const leftButtonClick = () => {
 	const previousIndexNumber = carouselIndex - 1 < 0 ? carouselItems.length - 1 : carouselIndex - 1;
 	const previousIndex = document.querySelector(`[data-index="${previousIndexNumber}"]`);
 
-	const previousPreviousIndexNumber = previousIndexNumber - 1 < 0 ? carouselItems.length - 1 : previousIndexNumber - 1;
+	const previousPreviousIndexNumber =
+		previousIndexNumber - 1 < 0 ? carouselItems.length - 1 : previousIndexNumber - 1;
 	const previousPreviousIndex = document.querySelector(`[data-index="${previousPreviousIndexNumber}"]`);
 
 	//current index is just taken from the global variable
@@ -73,6 +75,8 @@ const leftButtonClick = () => {
 
 	// Update the current index variable
 	carouselIndex = previousIndexNumber;
+
+	textLoadSectionTrigger(previousIndex); // Sets off textLoad effect in any child of "current" section
 };
 
 function arrowNavHandler(event) {
