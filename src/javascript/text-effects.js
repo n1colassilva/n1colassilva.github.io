@@ -1,6 +1,3 @@
-// Retrieve all elements with the "text-effect" class
-const allTextEffectWanters = document.getElementsByClassName("text-effect");
-
 // Define the character sets
 const charSets = {
 	alphabet: "abcdefghijklmnopqrstuvwxyz",
@@ -16,10 +13,12 @@ const charSets = {
 
 function textLoadEffect(element) {
 	// Avoids running function while it's already going
-	if (element.isTextLoadEffectRunning == true) {
+	if (element.isTextEffectRunning == true) {
+		console.log("returned");
 		return;
 	}
-	element.isTextLoadEffectRunning = true;
+	console.log("keeps going");
+	element.isTextEffectRunning = true;
 
 	const settings = element.dataset.textEffectSettings.split(",");
 	// settings shall follow the format: Character set, Iterations (how many times each letter should change) and time (in miliseconds)
@@ -27,7 +26,7 @@ function textLoadEffect(element) {
 	const letterSet = charSets[settings[0]] || ""; // Settings come in a string separated by commas
 	const iterationAmount = parseInt(settings[1], 10); // How many times will the letter change before going to the next one
 	const msTime = parseInt(settings[2], 10); // Time in miliseconds for conclusion of effect
-	const ogText = element.textContent.trim(); // apparently trimming it makes things not go invisible, go figure
+	const ogText = element.originalText.trim(); // apparently trimming it makes things not go invisible, go figure
 
 	let iteration = 0; // Iteration counter
 
@@ -35,15 +34,16 @@ function textLoadEffect(element) {
 	clearInterval(interval);
 
 	interval = setInterval(() => {
-		element.innerText = element.innerText
+		element.textContent = element.textContent
+			.trim()
 			.split("")
 			/* index is the current letter
-			iteration gets counted up
-			iteration > index causes it to change
-			the letter to its final form
-			if it isnt then the letter is
-			changed to a random symbol
-			from the charset string */
+				iteration gets counted up
+				iteration > index causes it to change
+				the letter to its final form
+				if it isnt then the letter is
+				changed to a random symbol
+				from the charset string */
 			.map((_, index) => {
 				if (index < iteration) {
 					return ogText.charAt(index);
@@ -52,36 +52,42 @@ function textLoadEffect(element) {
 				return letterSet.charAt(Math.floor(Math.random() * letterSet.length));
 			})
 			.join("");
-
 		if (iteration >= ogText.length) {
 			clearInterval(interval);
 		}
 
 		iteration += 1 / iterationAmount;
 		/* Counts up the iteration counter
-		Not a whole number so that it runs as many required times 
-		within  alloted time */
+			Not a whole number so that it runs as many required times 
+			within  alloted time */
 
 		// Check if this is the last run
 		if (iteration > ogText.length) {
-			element.isTextLoadEffectRunning = false; // Allow effect to go again
+			element.isTextEffectRunning = false; // Allow effect to go again
+			element.textContent = element.originalText;
+			console.log("set");
 		}
 	}, msTime); // User determined delay for each letter
 }
 
-//let isTextLoadEffectRunning = false;
+//let isTextEffectRunning = false;
 
 //finds and starts textLoad effect on children of element
 function textLoadSectionTrigger(element) {
 	const nav_textEffectWanters = element.getElementsByClassName("text-effect");
+	console.log(nav_textEffectWanters.length);
 	for (let i = 0; i < nav_textEffectWanters.length; i++) {
 		textLoadEffect(nav_textEffectWanters[i]);
 	}
 }
 
+// Retrieve all elements with the "text-effect" class
+let allTextEffectWanters = document.getElementsByClassName("text-effect");
+
 // Loop through each element that has the desired class and adds event listeners
 for (let i = 0; i < allTextEffectWanters.length; i++) {
 	const element = allTextEffectWanters[i];
+	element.originalText = element.textContent;
 
 	// Add a mouseover event listener to the element
 	element.addEventListener("mouseover", function () {
